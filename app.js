@@ -89,7 +89,11 @@
     }
 
     const sides = {};
-    for (const b of B) sides[b] = shuffle([...Array(k)].map((_, i) => (i < k / 2 ? "A" : "B")), rng);
+    for (const b of B) {
+      // odd k (e.g. 15): which side gets the extra trial is random per baseline, so A/B stays balanced overall
+      const nA = k % 2 ? (rng() < 0.5 ? Math.ceil(k / 2) : Math.floor(k / 2)) : k / 2;
+      sides[b] = shuffle([...Array(k)].map((_, i) => (i < nA ? "A" : "B")), rng);
+    }
     let trials = seq.map(({ p, b }) => {
       const side = sides[b].pop();
       const ref = M.prompts[p].ref, other = M.prompts[p].b[b];
@@ -239,7 +243,6 @@
     $("progress-fill").style.width = `${(100 * pos) / S.trials.length}%`;
     $("prompt-action").textContent = pr.action ? pr.action.charAt(0).toUpperCase() + pr.action.slice(1) : "";
     $("prompt-text").textContent = pr.text;
-    $("prompt-details").open = false;
     $("loading").textContent = "Loading videos…";
     $("loading").classList.remove("hidden");
     vA.pause(); vB.pause();
@@ -260,10 +263,10 @@
   }
 
   function answer(choice) {
-    if (!cur || !cur.enabledAt) return;
+    if (!cur || !cur.enabledAt || (choice !== "A" && choice !== "B")) return;   // forced choice: no tie
     setAnswersEnabled(false);
     const pos = S.pos, t = S.trials[pos];
-    const ours_result = choice === "tie" ? "tie" : choice === t.ours_side ? "win" : "loss";
+    const ours_result = choice === t.ours_side ? "win" : "loss";
     const row = makeRow("trial", {
       trial_pos: pos, prompt_id: M.prompts[t.p].pid, baseline_code: t.b, ours_side: t.ours_side,
       video_a: t.va, video_b: t.vb, choice, ours_result, is_repeat: t.is_repeat, repeat_of: t.repeat_of,
@@ -306,10 +309,11 @@
   }
 
   // ---------------- screens / wiring ----------------
-  function newSession(name) {
-    const nonce = randHex(8);
-    const rng = mulberry32(cyrb53(`${name}|${nonce}`) % 4294967296);
-    S = { v: 1, sid: randHex(5), name, nonce, created: Date.now(), manifest_version: M.version, sig: studySig(),
+  function newSession() {
+    // no names: each browser gets a random anonymous ID (kept in localStorage for resume)
+    const nonce = randHex(8), sid = randHex(5);
+    const rng = mulberry32(cyrb53(`${sid}|${nonce}`) % 4294967296);
+    S = { v: 2, sid, name: `anon-${sid}`, nonce, created: Date.now(), manifest_version: M.version, sig: studySig(),
           trials: [], answers: [], pos: 0, unsent: [], completed: false };
     S.trials = buildTrials(rng);
     save();
@@ -321,40 +325,31 @@
   }
 
   function wire() {
-    const nameIn = $("name");
-    nameIn.addEventListener("input", () => ($("btn-start").disabled = nameIn.value.trim().length < 1));
-    nameIn.addEventListener("keydown", (e) => { if (e.key === "Enter" && nameIn.value.trim()) $("btn-start").click(); });
-    $("btn-start").addEventListener("click", () => {
-      newSession(nameIn.value.trim().slice(0, 40));
-      $("btn-begin").textContent = "I understand, start";
-      show("screen-instr");
-    });
-    $("btn-resume").addEventListener("click", () => {
+    $("btn-begin").addEventListener("click", () => {
+      if (!S) newSession();
       if (S.completed) return finish();
       show("screen-trial"); showTrial(S.pos);
     });
-    $("btn-discard").addEventListener("click", () => {
-      flush();
-      if (HAS_ENDPOINT && S && S.unsent.length && navigator.sendBeacon) {
-        navigator.sendBeacon(ENDPOINT, new Blob([JSON.stringify({ rows: S.unsent })], { type: "text/plain" }));
-      }
-      S = null;
-      try { localStorage.removeItem(LS_KEY); } catch (e) { /* ignore */ }
-      $("resume-box").classList.add("hidden");
-      $("name-box").classList.remove("hidden");
-    });
-    $("btn-begin").addEventListener("click", () => { show("screen-trial"); showTrial(S.pos); });
     $("btn-help").addEventListener("click", () => {
       vA.pause(); vB.pause(); cur = null;
       $("btn-begin").textContent = "Back to the videos";
+      $("start-note").textContent = "";
       show("screen-instr");
+    });
+    $("link-new").addEventListener("click", (e) => {
+      e.preventDefault();
+      if (HAS_ENDPOINT && S && S.unsent.length && navigator.sendBeacon) {
+        navigator.sendBeacon(ENDPOINT, new Blob([JSON.stringify({ rows: S.unsent })], { type: "text/plain" }));
+      }
+      try { localStorage.removeItem(LS_KEY); } catch (err) { /* ignore */ }
+      location.reload();
     });
     $("btn-replay").addEventListener("click", replay);
     document.querySelectorAll(".ans").forEach((b) => b.addEventListener("click", () => answer(b.dataset.choice)));
     document.addEventListener("keydown", (e) => {
       if ($("screen-trial").classList.contains("hidden") || e.target.tagName === "INPUT") return;
       const k = e.key.toLowerCase();
-      const map = { a: "A", arrowleft: "A", s: "tie", arrowdown: "tie", b: "B", arrowright: "B" };
+      const map = { a: "A", arrowleft: "A", b: "B", arrowright: "B" };
       if (k === "r") { replay(); e.preventDefault(); return; }
       if (map[k]) { e.preventDefault(); answer(map[k]); }
     });
@@ -375,20 +370,26 @@
       document.body.innerHTML = "<main><h1>Could not load the study.</h1><p>Please reload the page.</p></main>";
       return;
     }
+    // fill {TRIALS} / {MINUTES} placeholders in the (editable) instruction text; text nodes only, so the
+    // buttons and their listeners are untouched
     const nTot = M.baselines.length * M.n_per_baseline + (M.n_repeat_checks || 0);
-    document.querySelectorAll(".est-min").forEach((el) => (el.textContent = Math.round((nTot * SEC_PER_TRIAL) / 300) * 5));
+    const minutes = Math.max(5, Math.round((nTot * SEC_PER_TRIAL) / 300) * 5);
+    const walker = document.createTreeWalker($("screen-instr"), NodeFilter.SHOW_TEXT);
+    for (let n = walker.nextNode(); n; n = walker.nextNode()) {
+      if (n.nodeValue.includes("{")) n.nodeValue = n.nodeValue.replaceAll("{TRIALS}", nTot).replaceAll("{MINUTES}", minutes);
+    }
     if (!HAS_ENDPOINT) console.warn("STUDY_CONFIG.ENDPOINT not set: answers are kept locally only.");
     const saved = loadSaved();
-    if (saved && saved.sig !== studySig()) {   // study changed (e.g. a baseline was added): drop stale session
+    if (saved && (saved.v !== 2 || saved.sig !== studySig())) {   // study changed: drop the stale session
       try { localStorage.removeItem(LS_KEY); } catch (e) { /* ignore */ }
-    } else if (saved && saved.v === 1 && saved.trials && saved.trials.length) {
+    } else if (saved && saved.trials && saved.trials.length) {
       S = saved;
       flush();
-      $("resume-name").textContent = S.name;
-      $("resume-progress").textContent = S.completed ? "all" : `${S.pos} / ${S.trials.length}`;
-      $("btn-resume").textContent = S.completed ? "Show completion page" : "Resume";
-      $("resume-box").classList.remove("hidden");
-      $("name-box").classList.add("hidden");
+      if (S.completed) return finish();
+      if (S.pos > 0) {
+        $("btn-begin").textContent = "Continue where you left off";
+        $("start-note").textContent = `${S.pos} / ${S.trials.length} done`;
+      }
     }
   }
   init();

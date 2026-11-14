@@ -10,29 +10,22 @@
 <body>
 <main id="app">
 
-  <!-- ===== start ===== -->
-  <section id="screen-start" class="screen">
-    <h1>Which video is more physically realistic?</h1>
-    <p class="lead">You will watch pairs of short AI-generated videos and pick the one whose motion and
-      interactions look more <b>physically realistic</b>. It takes about <b><span class="est-min">40</span> minutes</b>.
-      Your progress is saved in this browser, so you can close the tab and come back to finish.</p>
-    <div id="resume-box" class="card hidden">
-      <p>You have an unfinished session as <b id="resume-name"></b> (<span id="resume-progress"></span> done).</p>
-      <button id="btn-resume" class="primary">Resume</button>
-      <button id="btn-discard" class="ghost">Start over as someone else</button>
-    </div>
-    <div id="name-box" class="card">
-      <label for="name">Enter any name or nickname (it only labels your answers):</label>
-      <input id="name" type="text" maxlength="40" autocomplete="off" placeholder="e.g. blue-otter">
-      <button id="btn-start" class="primary" disabled>Continue</button>
-    </div>
-    <p class="small">Participation is voluntary. We record only your answers, the name you type, timing,
-      and your browser type. Please use a laptop or desktop if possible.</p>
-  </section>
+  <!-- ===== instructions (first page) ===== -->
+  <section id="screen-instr" class="screen">
 
-  <!-- ===== instructions ===== -->
-  <section id="screen-instr" class="screen hidden">
-    <h1>What to look for</h1>
+<!-- ================================================================================================
+     EDIT INSTRUCTIONS BELOW. Everything between this line and "END OF EDITABLE INSTRUCTIONS" is plain
+     HTML text you can change freely:
+       <h1>/<h2> = headings, <p> = paragraph, <b>bold</b>, <li> = bullet point.
+       One example card = one <div class="ex"> ... </div> line: icon, then <b>title</b><br>description.
+       Copy a card line to add one, delete a line to remove one.
+     {MINUTES} and {TRIALS} are filled in automatically (estimated duration / number of comparisons).
+     Do NOT change anything outside this block (ids/buttons there are used by app.js).
+     ================================================================================================ -->
+    <h1>Which video is more physically realistic?</h1>
+    <p class="lead">You will watch <b>{TRIALS} pairs</b> of short AI-generated videos. For each pair, pick the
+      video whose motion and interactions look more <b>physically realistic</b>. It takes about
+      <b>{MINUTES} minutes</b>. Your progress is saved in this browser, so you can close the tab and come back later.</p>
     <p>Each trial shows a text description and <b>two videos (A and B)</b> generated from it. They play in a loop.
       After both have played once, choose the video that is <b>more physically realistic</b>: the one whose
       events could more plausibly happen in the real world.</p>
@@ -58,12 +51,19 @@
         of the frame rate, and black bars at the sides.</li>
       <li>A video in which <b>almost nothing moves is not automatically more realistic</b>. If water is
         being poured but never moves, or a kicked ball never leaves the foot, that is unrealistic too.</li>
-      <li>Both videos may have problems. Pick the one with <b>fewer or less severe</b> physics errors.</li>
-      <li>Use <b>"About the same"</b> only when you really can't tell them apart in realism.</li>
-      <li>Use <b>Replay</b> as often as you like. Keyboard: <kbd>A</kbd> / <kbd>S</kbd> / <kbd>B</kbd>
-        (or <kbd>←</kbd> / <kbd>↓</kbd> / <kbd>→</kbd>), <kbd>R</kbd> = replay.</li>
+      <li>Both videos may have problems. Pick the one with <b>fewer or less severe</b> physics errors.
+        You must choose one; if they look equally good, go with your best guess.</li>
+      <li>Use <b>Replay</b> as often as you like. Keyboard: <kbd>A</kbd> / <kbd>←</kbd> for video A,
+        <kbd>B</kbd> / <kbd>→</kbd> for video B, <kbd>R</kbd> = replay.</li>
     </ul>
-    <button id="btn-begin" class="primary">I understand, start</button>
+    <p class="small">Participation is voluntary and anonymous. We record only your answers, timing,
+      a random ID for this browser, and your browser type. Please use a laptop or desktop if possible.</p>
+<!-- ======================================= END OF EDITABLE INSTRUCTIONS ======================================= -->
+
+    <div class="start-row">
+      <button id="btn-begin" class="primary">Start the study</button>
+      <span id="start-note" class="small"></span>
+    </div>
   </section>
 
   <!-- ===== trial ===== -->
@@ -76,7 +76,7 @@
     <div class="prompt card">
       <div class="prompt-head">Text description</div>
       <div id="prompt-action" class="prompt-action"></div>
-      <details id="prompt-details"><summary>Show full description</summary><p id="prompt-text"></p></details>
+      <p id="prompt-text" class="prompt-text"></p>
     </div>
     <div class="pair">
       <figure><div class="vlabel">A</div><video id="vA" muted playsinline loop preload="auto"></video></figure>
@@ -89,7 +89,6 @@
     <div class="question">Which video is more <b>physically realistic</b>?</div>
     <div class="answers">
       <button class="ans" data-choice="A" disabled>A is more realistic</button>
-      <button class="ans" data-choice="tie" disabled>About the same</button>
       <button class="ans" data-choice="B" disabled>B is more realistic</button>
     </div>
     <div id="wait-hint" class="small center">Answer buttons unlock after both videos have played once.</div>
@@ -105,6 +104,7 @@
       <button id="btn-download" class="ghost">Download my answers (backup)</button>
       <p class="small" id="done-contact"></p>
     </div>
+    <p class="small"><a href="#" id="link-new">Someone else on this computer? Start a new session.</a></p>
   </section>
 
 </main>

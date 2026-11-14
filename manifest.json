@@ -1,17 +1,44 @@
 {
 "study": "physics-realism-2afc",
-"version": 1,
-"n_per_baseline": 20,
-"n_repeat_checks": 4,
+"version": 2,
+"n_per_baseline": 15,
+"n_repeat_checks": 0,
 "fps": 16,
 "n_frames": 81,
 "baselines": [
 "g2",
+"g3",
 "g5",
 "g7",
 "g8"
 ],
 "prompts": [
+{
+"pid": "vp004",
+"action": "drop kicking",
+"text": "In a sun-drenched soccer field, a dynamic athlete clad in a sleek black jersey and vibrant red shorts sprints with purpose, their long hair flowing behind them. The camera captures their fluid motion in a static shot, emphasizing the player's agility as they plant their right foot firmly on the ground, the ball poised at their side. With a sudden burst of energy, they swing their left leg high, executing a powerful drop kick that sends the soccer ball soaring into the air in a graceful arc. The ball's trajectory is beautifully illuminated by the golden-hour sunlight, casting a warm glow that enhances the scene's cinematic quality. The background blurs into a lush green expanse, drawing focus to the athlete's skillful technique and the ball's majestic flight, culminating in a moment of triumph as it reaches its zenith before descending towards the ground.",
+"ref": "294557f9fdbc",
+"b": {
+"g7": "e152952b7a00",
+"g8": "0ff2b0215b59",
+"g2": "c2a369dbee95",
+"g5": "f3702ba4ed38",
+"g3": "d5b5c8aa48ef"
+}
+},
+{
+"pid": "vp008",
+"action": "ice skating",
+"text": "In a breathtaking ice rink, a skilled skater clad in a sleek black outfit and a vibrant red helmet glides effortlessly across the pristine ice. The camera captures the scene from a static position, framing the skater as they push off from the wall, their powerful legs propelling them forward with grace and precision. The rink's expansive surface, illuminated by the soft glow of overhead lights, reflects the skater's dynamic movements, creating a mesmerizing interplay of light and shadow. As the skater gains momentum, they execute a series of fluid spins and turns, showcasing their mastery of the ice. The background remains a serene canvas of empty bleachers, enhancing the focus on the skater's artistry and the rhythmic flow of their performance, culminating in a moment of stillness that encapsulates the beauty of their craft.",
+"ref": "1f8f353b89ab",
+"b": {
+"g7": "18824811e801",
+"g8": "2bce0762a60b",
+"g2": "48edf56c8385",
+"g5": "e7a45ab98a18",
+"g3": "daceccbc66fa"
+}
+},
 {
 "pid": "vp010",
 "action": "poking something so lightly that it doesn't or almost doesn't move",
@@ -21,79 +48,73 @@
 "g7": "95ebaec5545a",
 "g8": "331cf8611be3",
 "g2": "a04124d9dfc3",
-"g5": "8413f123d2ef"
+"g5": "8413f123d2ef",
+"g3": "d99b796c8dcf"
 }
 },
 {
-"pid": "vp022",
-"action": "catching or throwing softball",
-"text": "A breathtaking sports moment unfolds in a sun-drenched baseball field, where the camera captures a dynamic throw from the outfield. The scene opens with a close-up of a softball, its vibrant red stitching glinting in the golden-hour light, as it soars through the air in a graceful arc. The lens remains fixed, allowing the ball to dominate the frame, its trajectory marked by a subtle blur of the background, hinting at the urgency of the play. As the ball descends, the camera shifts to reveal the catcher, clad in a dark jersey, poised at home plate, his gloved hand outstretched in anticipation. The tension builds as the ball approaches, and the catcher's focused expression reflects the weight of the moment. The scene culminates in a dramatic drop, the ball slipping from his grasp, encapsulating the thrill of a missed catch, all while the backdrop of the field and the distant stands remains a blur, enhancing the intimate focus on this pivotal play.",
-"ref": "2fa774bc5808",
+"pid": "vp023",
+"action": "pouring something into something",
+"text": "In a sleek, modern bathroom, a close-up shot captures the elegant curve of a white ceramic sink, its smooth surface glistening under soft, diffused lighting. The camera remains static, focusing on the sink's edge where a clear glass soap dispenser, adorned with a metallic pump, stands poised. As the scene unfolds, a hand enters the frame, its fingers gracefully wrapping around the dispenser's pump, creating a sense of anticipation. With a gentle squeeze, a stream of liquid soap flows into the sink, its viscosity creating a mesmerizing cascade that dances across the surface. The soap's iridescent sheen catches the light, transforming into a shimmering, translucent waterfall that spills into the sink, leaving behind a trail of delicate bubbles that float and merge, creating a captivating visual symphony of motion and light.",
+"ref": "de174ca199d6",
 "b": {
-"g7": "0e210e7ee3fc",
-"g8": "3fca2a995b20",
-"g2": "87b5e5a85fd9",
-"g5": "e173d9d26660"
+"g7": "0da27a5be651",
+"g8": "2884ba6f0ed2",
+"g2": "5b8605bf3b71",
+"g5": "50ba244d23f3",
+"g3": "02bb75832218"
 }
 },
 {
-"pid": "vp038",
-"action": "javelinthrow",
-"text": "A dramatic close-up captures a javelin poised for flight, its sleek metallic shaft glinting under the bright sunlight. The camera remains static, focusing intently on the weapon's tip, which is slightly damaged, hinting at a recent impact. As the javelin is released, it soars through the air with a powerful trajectory, its motion accentuated by a subtle blur effect that emphasizes its speed. The camera follows its arc, revealing the javelin's wobbling flight path, a testament to its imperfect balance. As it descends, the camera shifts to a wider angle, showcasing the grassy field where the javelin lands, slightly off-target, its tip buried in the ground. The scene is bathed in a warm, golden-hour glow, enhancing the visual drama of this athletic feat, while the absence of spectators amplifies the focus on the javelin's journey and the skill of the unseen thrower.",
-"ref": "db52173e7840",
+"pid": "vp028",
+"action": "playing cricket",
+"text": "In a sun-drenched cricket field, a dynamic moment unfolds as a skilled fielder, clad in a vibrant blue jersey, leaps with agility to intercept a soaring ball. The camera captures the action in a static wide shot, showcasing the expansive green outfield and the distant stands, where spectators eagerly await the outcome. As the ball descends, the fielder's focus sharpens, their gloved hand poised to catch it with precision. The ball, a brilliant white against the lush backdrop, is expertly secured in the fielder's grasp, their body language radiating confidence and control. The scene is bathed in warm, golden-hour light, enhancing the vivid colors of the jersey and the lush grass, while the gentle breeze stirs the air, adding a sense of motion to the serene atmosphere. This moment encapsulates the thrill of cricket, where skill and determination meet in a fleeting instant.",
+"ref": "7bf8e14773ef",
 "b": {
-"g7": "aee3db008c6c",
-"g8": "caf78354cb14",
-"g2": "355595fe18b7",
-"g5": "8674d57f9403"
+"g7": "a18629a18534",
+"g8": "2c471ff46964",
+"g2": "35b9634267ff",
+"g5": "a6686b39ff42",
+"g3": "fa75aa22f00f"
 }
 },
 {
-"pid": "vp052",
-"action": "lifting a surface with something on it until it starts sliding down",
-"text": "In a sun-drenched outdoor setting, two individuals clad in casual attire—one in a light blue shirt and the other in a dark blue top—stand poised over a large, flat stone slab, its surface glistening with moisture. The camera captures a static, close-up view, emphasizing the tension as they prepare to lift the heavy stone, their expressions focused and determined. As they hoist the slab, the scene transforms dramatically; the stone tilts, revealing a hidden cache of smaller rocks beneath, each glinting with a unique texture and color. The rocks begin to tumble down, their descent punctuated by the soft rustle of gravel and the gentle thud of stone against stone. The backdrop of lush greenery and a distant, serene landscape enhances the tranquil yet dynamic atmosphere, while the interplay of light and shadow creates a captivating visual narrative that draws the viewer into this moment of discovery.",
-"ref": "edfb26d1e981",
+"pid": "vp041",
+"action": "ice skating",
+"text": "In a serene ice rink bathed in soft, diffused light, a solitary figure clad in a sleek black outfit glides gracefully across the pristine ice. The camera captures a static, close-up view, focusing intently on the skater's upper body as they execute a flawless spin, their arms elegantly extended to the sides, embodying poise and control. Initially, the skater rotates at a deliberate pace, showcasing the artistry of their technique, with the blurred background hinting at the expansive rink. As the spin accelerates, the camera remains steadfast, allowing the viewer to appreciate the skater's fluidity and precision. The subtle interplay of light and shadow enhances the scene's tranquility, while the absence of other skaters emphasizes the solitary nature of this practice session, creating a captivating visual narrative of dedication and skill.",
+"ref": "2c676a551351",
 "b": {
-"g7": "1e7ceb81ce4e",
-"g8": "52ca32a9ed4d",
-"g2": "e016ffcc25eb",
-"g5": "a7c5f7b37a09"
+"g7": "547c437a3454",
+"g8": "0e3920ba1190",
+"g2": "08f214c9b1c4",
+"g5": "8281551f859a",
+"g3": "3f9fb21a772a"
 }
 },
 {
-"pid": "vp056",
-"action": "ripping paper",
-"text": "In a dimly lit room, a close-up shot captures a pair of hands, one adorned with a striking black and white striped glove, the other bare, as they grip a vibrant red playing card. The camera remains static, focusing intently on the card's intricate design, which features a bold black outline and a central red circle. As the hands begin to pull apart, the card's surface glimmers under the soft, diffused lighting, enhancing the tension of the impending action. With a sudden, deliberate motion, the hands tear the card in half, the crisp sound of the paper resonating through the room. The camera lingers on the two halves, now separated, showcasing the clean break and the stark contrast of the black and white stripes against the red. This intimate portrayal of a simple yet powerful gesture is elevated by the deliberate pacing and the subtle interplay of light and shadow, creating a captivating visual narrative.",
-"ref": "21877e9e3b79",
+"pid": "vp046",
+"action": "pouring something into something until it overflows",
+"text": "In a rustic farm setting, a man clad in a dark jacket and a wide-brimmed hat stands beside a large, open bin, its metal surface glinting under the golden-hour sunlight. The camera captures a static, close-up view of his hands as he deftly pours a cascade of golden corn kernels from a wheelbarrow into the bin, creating a mesmerizing flow that dances in the air. The bin, brimming with the harvest, overflows, forming a mound of corn that spills over its edges, a testament to the season's abundance. The background features a weathered wooden fence and a distant tree, enhancing the rural ambiance. As the man continues his rhythmic pouring, the camera remains focused on the dynamic interplay of the kernels, capturing the essence of a hardworking day on the farm.",
+"ref": "af548c005a9c",
 "b": {
-"g7": "cd05409a6547",
-"g8": "fce44b0509e0",
-"g2": "1e3ca817896f",
-"g5": "835b4adc2041"
+"g7": "4a59762bc4a6",
+"g8": "a7370af4f700",
+"g2": "db1d647f7b30",
+"g5": "c9d52d007335",
+"g3": "483e5584c86d"
 }
 },
 {
-"pid": "vp059",
-"action": "poking something so it slightly moves",
-"text": "In a meticulously crafted industrial setting, a towering crane, its robust arm adorned with a sturdy claw, gracefully hovers over a large, rectangular container. The camera captures the scene from a static angle, revealing the intricate details of the container's surface, marked with a prominent '1' and '2' on its sides, hinting at its significant contents. The crane's arm, a masterpiece of engineering, extends with precision, its claw gently nudging the container, causing it to shift slightly to the right. The background is a symphony of industrial machinery, with a large, cylindrical tank looming in the distance, enhancing the scene's industrial ambiance. The lighting is soft and diffused, casting gentle shadows that accentuate the textures of the container and the crane's mechanical components, while the subtle hum of machinery adds an immersive layer to this choreographed dance of industry and precision.",
-"ref": "c6e59eec24f6",
+"pid": "vp058",
+"action": "bouncing on bouncy castle",
+"text": "In a vibrant, sun-drenched outdoor setting, a young child, clad in a bright yellow shirt and blue shorts, stands on a colorful bouncy castle, its surface adorned with playful cartoon characters. The camera captures the child's infectious joy as they bounce with abandon, their arms flailing in delight, creating a dynamic rhythm of movement. The bouncy castle, a vibrant blue and yellow, sways gently with each leap, its fabric stretching and contracting to the child's enthusiastic energy. The background features a lush green lawn, framed by a rustic wooden fence, while a few adults stand nearby, their smiles reflecting the joy of the moment. The scene is bathed in soft, golden-hour light, enhancing the playful atmosphere, as the camera remains static, allowing the child's exuberant movements to take center stage, capturing the essence of pure, uninhibited childhood fun.",
+"ref": "7ce5c30ee334",
 "b": {
-"g7": "f121d1841387",
-"g8": "56f0cf5214eb",
-"g2": "b121cb2d61ed",
-"g5": "68c75d8755e4"
-}
-},
-{
-"pid": "vp060",
-"action": "roller skating",
-"text": "In a sun-drenched indoor roller rink, two skaters glide gracefully across the polished wooden floor, their synchronized movements creating a mesmerizing dance. The camera captures them from a static position, allowing the viewer to fully appreciate their fluidity and precision. The skater on the left, clad in a vibrant blue top and black shorts, executes a flawless spin, her arms extended for balance, while the skater on the right, in a striking red top and black shorts, mirrors her movements with effortless synchronization. As they complete their spins, the camera lingers on the intricate patterns left by their skates on the floor, a testament to their skill and control. The warm, golden-hour light bathes the scene, enhancing the dynamic interplay of shadows and highlights, while the soft hum of the rink's atmosphere envelops the viewer in this captivating display of athleticism and artistry.",
-"ref": "2fc8d1185f42",
-"b": {
-"g7": "b1306b351316",
-"g8": "f31d131592b9",
-"g2": "d38c28784cdd",
-"g5": "ef694c4a8296"
+"g7": "bf9920e1d055",
+"g8": "9186c4e0fd16",
+"g2": "5dd3dbbcc749",
+"g5": "4000a0e90cf4",
+"g3": "db53b7242445"
 }
 },
 {
@@ -105,7 +126,21 @@
 "g7": "ccb3cded4c48",
 "g8": "190289c6ccdb",
 "g2": "cd2e57830520",
-"g5": "14a9715a4915"
+"g5": "14a9715a4915",
+"g3": "b8ff32e7b63c"
+}
+},
+{
+"pid": "vp071",
+"action": "nunchucks",
+"text": "In a dynamic display of martial arts prowess, a skilled practitioner wields a pair of nunchucks, their hands clad in black gloves that enhance grip and safety. The scene unfolds in a dimly lit, industrial setting, where a stack of wooden blocks, meticulously arranged in a pyramid, awaits the test of strength. The camera captures the moment with a static focus, highlighting the nunchucks' fluid motion as they swing through the air, their polished wooden surfaces glinting under the soft, ambient light. As the weapon connects with the blocks, a cascade of splinters and debris erupts, scattering across the floor, while the practitioner maintains a steady, focused stance. The atmosphere is charged with tension, accentuated by the rhythmic sound of impact, as the blocks succumb to the force, embodying the artistry and precision of this ancient martial art.",
+"ref": "a305c86b1ef3",
+"b": {
+"g7": "b3aab9ab0d46",
+"g8": "44267174e6d8",
+"g2": "07f5be5ee564",
+"g5": "267f54cd26ad",
+"g3": "a6646da64125"
 }
 },
 {
@@ -117,19 +152,8 @@
 "g7": "fb38d6caa766",
 "g8": "6bbae312f663",
 "g2": "5d9217599a32",
-"g5": "607aad5c5e89"
-}
-},
-{
-"pid": "vp085",
-"action": "poking something so it slightly moves",
-"text": "The video presents a meticulous robotic arm, its sleek metallic surface glinting under the bright studio lights, as it deftly manipulates a circuit board. The arm, equipped with a slender, precision tool, hovers over the board, its movements fluid and deliberate, embodying the essence of advanced automation. The camera captures this intricate dance in a static, close-up shot, allowing viewers to appreciate the fine details of the robotic arm's mechanical components and the delicate circuit board, adorned with intricate electronic components. The background is softly blurred, enhancing the focus on the arm's precise movements as it gently nudges the board, ensuring its alignment with a nearby connector. The scene is bathed in a cool, clinical light, evoking a sense of technological sophistication and precision, inviting the audience to marvel at the seamless interaction between human ingenuity and robotic dexterity.",
-"ref": "a61107e01e6c",
-"b": {
-"g7": "f9d5a64cec24",
-"g8": "bc277286524c",
-"g2": "f2494bac9cfc",
-"g5": "0c63c1c3f947"
+"g5": "607aad5c5e89",
+"g3": "8745ac2a6c90"
 }
 },
 {
@@ -141,19 +165,8 @@
 "g7": "189cad9e12f9",
 "g8": "5729bc1ae897",
 "g2": "e021dad332d7",
-"g5": "0d7f202acf07"
-}
-},
-{
-"pid": "vp093",
-"action": "pulling two ends of something so that it separates into two pieces",
-"text": "In this captivating close-up, a pair of hands, adorned with a sleek black watch, delicately grips a tightly coiled rubber band, its vibrant red hue contrasting sharply against the neutral backdrop. The camera, fixed in a static position, captures the tension as the hands slowly pull apart the rubber band, revealing the intricate coils that stretch and compress under the gentle pressure. The scene is illuminated by soft, diffused lighting that accentuates the textures of the rubber and the watch, creating a striking visual contrast. As the tension builds, the rubber band snaps with a satisfying pop, releasing a burst of energy that echoes through the frame. This moment of release is highlighted by a subtle shift in the lighting, enhancing the dynamic interplay of light and shadow, culminating in a visually arresting display of tension and release.",
-"ref": "9e11a1bb6628",
-"b": {
-"g7": "f58a5472e012",
-"g8": "5e419f033182",
-"g2": "f272fe49252b",
-"g5": "375aa099458d"
+"g5": "0d7f202acf07",
+"g3": "24317581d3a2"
 }
 },
 {
@@ -165,7 +178,8 @@
 "g7": "72163158c775",
 "g8": "46c757387a07",
 "g2": "0292c551d218",
-"g5": "8b11d40cfd74"
+"g5": "8b11d40cfd74",
+"g3": "3fe0460352ad"
 }
 },
 {
@@ -177,7 +191,8 @@
 "g7": "e886e9d15be6",
 "g8": "061aabfe0c54",
 "g2": "24737a535fd7",
-"g5": "0867712eab27"
+"g5": "0867712eab27",
+"g3": "85d97f42f6c0"
 }
 },
 {
@@ -189,7 +204,8 @@
 "g7": "a6938d99715b",
 "g8": "4d3f3e5556dc",
 "g2": "6d094c52710e",
-"g5": "cb163d14d1eb"
+"g5": "cb163d14d1eb",
+"g3": "6e68478f08de"
 }
 },
 {
@@ -201,19 +217,8 @@
 "g7": "7d3373a08ec8",
 "g8": "202e1adee495",
 "g2": "19203249d4dd",
-"g5": "9ffe2fe8eaa8"
-}
-},
-{
-"pid": "vp122",
-"action": "long jump",
-"text": "A breathtaking slow-motion sequence captures a dynamic leap in a serene, sunlit outdoor setting. The camera, positioned at a low angle, focuses on the athlete's powerful legs as they extend gracefully, revealing the intricate interplay of muscles and tendons. The athlete's body is poised in a perfect vertical jump, arms outstretched for balance, with a sleek black top and shorts accentuating their form. The background blurs into a soft, golden-hour glow, enhancing the sense of motion and freedom. Each frame is meticulously crafted, showcasing the athlete's strength and agility, while the static camera allows for a deep appreciation of their technique. This cinematic portrayal celebrates the artistry of human movement, inviting viewers to marvel at the beauty of athletic prowess.",
-"ref": "70f7967405f4",
-"b": {
-"g7": "3dfd6a03c54b",
-"g8": "1c4e316a40a2",
-"g2": "71d7b1ef56e5",
-"g5": "619bc7b9e17e"
+"g5": "9ffe2fe8eaa8",
+"g3": "8c347c19325b"
 }
 },
 {
@@ -225,31 +230,8 @@
 "g7": "92d36ee1b3bf",
 "g8": "204c810823a0",
 "g2": "7bcff83a5e16",
-"g5": "8dcb1b3d47a2"
-}
-},
-{
-"pid": "vp158",
-"action": "letting something roll up a slanted surface so it rolls back down",
-"text": "A vibrant orange plastic egg, reminiscent of a playful Easter theme, is the focal point of this whimsical scene. The egg, adorned with a charming smiley face, is positioned at the top of a gently sloping, light blue plastic slide, its surface glistening under the soft, diffused light of a cloudy day. As the egg begins its descent, it rolls gracefully down the slide, its bright hue contrasting beautifully against the cool blue. The camera captures this motion with a static shot, allowing the viewer to fully appreciate the egg's journey as it picks up speed, its smiley face beaming with joy. The background features a lush green lawn, dotted with colorful plastic toys and a small, playful figure, enhancing the playful atmosphere. As the egg reaches the bottom, it comes to a gentle stop, inviting a sense of satisfaction and delight, encapsulating the essence of childhood fun.",
-"ref": "90f17e9c0564",
-"b": {
-"g7": "51a865465b25",
-"g8": "39695928475a",
-"g2": "194fc88d8c7b",
-"g5": "8e0c1aed3f07"
-}
-},
-{
-"pid": "vp162",
-"action": "playing volleyball",
-"text": "In a sun-drenched outdoor volleyball court, the scene unfolds with a dynamic focus on a skilled outside hitter, clad in a vibrant blue jersey adorned with the number 10. The camera captures the athlete in a fluid motion, their powerful arm extending as they execute a precise line shot, the ball soaring through the air with a trajectory that hints at its imminent impact on the court. The backdrop features a lush green field, framed by a rustic wooden fence, while the sun casts a warm golden-hour glow, enhancing the vibrant colors of the scene. As the ball descends, it strikes the court with a sharp bounce, skidding along the line, a testament to the player's exceptional skill. The camera remains steady, allowing the viewer to fully appreciate the athlete's agility and the ball's trajectory, culminating in a moment of triumph as the ball crosses the line, signaling a point won.",
-"ref": "de866dbf8586",
-"b": {
-"g7": "9a42b76b6627",
-"g8": "4411a5766554",
-"g2": "e3698cb9e958",
-"g5": "f4f75793e940"
+"g5": "8dcb1b3d47a2",
+"g3": "d95e4c127535"
 }
 },
 {
@@ -261,7 +243,8 @@
 "g7": "e196911f62d3",
 "g8": "562a227e7fd6",
 "g2": "1007b882be64",
-"g5": "fd580b6b228c"
+"g5": "fd580b6b228c",
+"g3": "55b8f0c3d4f9"
 }
 },
 {
@@ -273,19 +256,8 @@
 "g7": "123d74bd062f",
 "g8": "33f93ade9ce9",
 "g2": "925bbdf1e375",
-"g5": "064064d134d8"
-}
-},
-{
-"pid": "vp173",
-"action": "pushing something onto something",
-"text": "In a sunlit room, a young child, clad in a vibrant blue shirt and a playful red hat, stands before a colorful toy car, poised on a wooden ramp. The camera captures the scene in a static medium shot, allowing the child's animated expressions to shine as they engage with the toy. With a determined look, the child leans forward, pushing the car gently onto the ramp, its wheels gliding smoothly over the polished surface. The ramp, adorned with a cheerful yellow and blue pattern, contrasts beautifully with the child's attire, enhancing the visual appeal. As the car begins its descent, the child's eyes widen with excitement, their hands reaching out in anticipation. The background, softly blurred, features a wall of colorful blocks, enriching the playful atmosphere. The scene culminates in a moment of joy as the child watches the car roll down, embodying the essence of childhood wonder and exploration.",
-"ref": "19661d2b61d6",
-"b": {
-"g7": "56a75b1944ef",
-"g8": "02cad6553920",
-"g2": "e5218e9fd732",
-"g5": "f27064db33b4"
+"g5": "064064d134d8",
+"g3": "a2c8ae38469a"
 }
 },
 {
@@ -297,31 +269,21 @@
 "g7": "aaf1f394b7a2",
 "g8": "b55ecc756b31",
 "g2": "a3f9d8aeb24d",
-"g5": "f060369a0382"
+"g5": "f060369a0382",
+"g3": "a88c3e7de782"
 }
 },
 {
-"pid": "vp179",
-"action": "sailing",
-"text": "In a breathtaking tableau of nautical mastery, a skilled sailor stands poised at the base of a towering mast, the sun casting a golden glow over the scene. The camera captures the intricate dance of the sailor's hands as they manipulate a robust winch, its metallic sheen glinting in the sunlight. The sailor's focused expression reveals the gravity of the task at hand, as they expertly adjust the halyard, a thick rope that snakes upward, guiding the heavy mainsail into position. The sail, a canvas of deep blue, unfurls majestically, revealing its intricate patterns and the strength of its fabric. The background features a serene expanse of water, dotted with distant vessels, while the mast, a symbol of the ship's power, looms large, its lines and rigging a testament to the artistry of sailing. The static camera angle immerses the viewer in this moment of precision and skill, as the sailor's steady movements bring the sail to its full height, embodying the essence of seafaring craftsmanship.",
-"ref": "bd39debb5ee8",
+"pid": "vp181",
+"action": "unfolding something",
+"text": "The video opens with a close-up of a tightly folded parachute, its vibrant colors and intricate patterns emerging from the tightly packed fabric. The camera remains static, capturing the dynamic transformation as the parachute unfolds, revealing a stunning array of hues—vibrant blues, greens, and reds—each section meticulously stitched together, showcasing the craftsmanship of its design. As the fabric gradually expands, the camera subtly shifts to maintain focus on the unfolding process, accentuating the delicate interplay of light and shadow that dances across the material. The background remains softly blurred, enhancing the visual impact of the unfolding parachute, which culminates in a breathtaking display of its full, billowing form, ready for flight. This cinematic moment captures the essence of anticipation and beauty in the art of parachuting.",
+"ref": "8e47ed893447",
 "b": {
-"g7": "ff0a4abe0550",
-"g8": "03ba8fc26417",
-"g2": "e88955f17593",
-"g5": "f20cbbc5ead6"
-}
-},
-{
-"pid": "vp189",
-"action": "twisting (wringing) something wet until water comes out",
-"text": "In a sleek, modern kitchen, a close-up shot captures a glistening, wet sponge resting on a pristine white sink, its surface reflecting the soft, ambient light. The camera remains static, focusing intently on the sponge as a hand enters the frame, its fingers gently squeezing the sponge, releasing a cascade of water that flows gracefully into the sink below. The water's movement is accentuated by the subtle play of light, creating a mesmerizing dance of droplets that shimmer and glisten. As the hand releases the sponge, it hovers momentarily before being lifted away, leaving behind a small puddle that glimmers in the light. The scene is devoid of distractions, allowing the viewer to fully immerse in the rhythmic, soothing ritual of wringing out the sponge, a testament to the artistry of everyday tasks.",
-"ref": "c1caf58c35ff",
-"b": {
-"g7": "c6d7371f021f",
-"g8": "67c9f57833de",
-"g2": "0e9bf7e9044d",
-"g5": "534b936ab6b3"
+"g7": "f1bd16a06d8c",
+"g8": "100efd56af15",
+"g2": "b831da90f0d7",
+"g5": "bdd530dd9803",
+"g3": "ffa5f24ab36a"
 }
 },
 {
@@ -333,19 +295,21 @@
 "g7": "476d7accafca",
 "g8": "450b4b168acc",
 "g2": "6301a4fe157a",
-"g5": "67b854f64318"
+"g5": "67b854f64318",
+"g3": "5a6993b99305"
 }
 },
 {
-"pid": "vp195",
-"action": "chiseling stone",
-"text": "In a sun-drenched workshop, a skilled craftsman, clad in a dark blue shirt and a protective face mask, meticulously shapes a pristine piece of soapstone. The camera captures a close-up of his hands, gloved in light blue, as he deftly wields a small chisel, its sharp edge glinting in the soft, diffused light. Each precise movement reveals the delicate artistry of stone carving, as fine shavings accumulate around him, creating a subtle contrast against the smooth, light-colored surface of the stone. The static camera angle immerses the viewer in the rhythmic dance of creation, highlighting the craftsman's focus and the intricate details of the chisel's path. The atmosphere is serene, with the gentle rustle of tools and the soft glow of the workshop enveloping the scene, inviting viewers to appreciate the beauty of manual craftsmanship.",
-"ref": "bef896e20e5b",
+"pid": "vp194",
+"action": "letting something roll down a slanted surface",
+"text": "In a serene, sunlit landscape, a cylindrical metal container, its surface gleaming with a metallic sheen, rolls down a gently sloping hill covered in lush, vibrant green grass. The camera captures the container's dynamic descent, its circular form glinting in the golden-hour light, as it gracefully navigates the uneven terrain. The background features a tranquil forest, where tall, slender trees sway gently, their leaves whispering in the breeze, while a small, delicate bush stands sentinel at the base of the hill. The scene is bathed in a warm, golden hue, enhancing the container's metallic reflections and the rich textures of the grass. As the container comes to a halt near the bush, the camera remains static, allowing the viewer to appreciate the harmonious interplay of nature and man-made object, creating a poignant moment of stillness amidst the gentle motion.",
+"ref": "b17d3fc4310a",
 "b": {
-"g7": "8dcf4292a9b1",
-"g8": "77bd1606a86c",
-"g2": "309b0cd0ca1d",
-"g5": "e1dbd171b053"
+"g7": "96ee6ae841dc",
+"g8": "58a4d1dcddaf",
+"g2": "566c3c653be6",
+"g5": "c595aa52a0ad",
+"g3": "e72e3cf777df"
 }
 },
 {
@@ -357,7 +321,8 @@
 "g7": "b7af70f2495d",
 "g8": "4bab88827e1e",
 "g2": "3daf3893f4ee",
-"g5": "fd50719dc16a"
+"g5": "fd50719dc16a",
+"g3": "2c43aaa413bc"
 }
 },
 {
@@ -369,7 +334,8 @@
 "g7": "d7a1388c6cf3",
 "g8": "53ea582e0f43",
 "g2": "cbbcb3f561eb",
-"g5": "14cea836c8fe"
+"g5": "14cea836c8fe",
+"g3": "cedcb89686ef"
 }
 },
 {
@@ -381,7 +347,8 @@
 "g7": "f97f7bf9c3c5",
 "g8": "200580336f42",
 "g2": "b07fabdd6267",
-"g5": "610095338ed5"
+"g5": "610095338ed5",
+"g3": "3838ad362664"
 }
 },
 {
@@ -393,7 +360,8 @@
 "g7": "a79c0c143460",
 "g8": "c0747ef5f7ac",
 "g2": "d88126c411d5",
-"g5": "3052e67736a8"
+"g5": "3052e67736a8",
+"g3": "20bb98b29f5a"
 }
 },
 {
@@ -405,31 +373,21 @@
 "g7": "337343a4c5df",
 "g8": "0bd191806aff",
 "g2": "9f7ac6b6d084",
-"g5": "6b970410cf26"
+"g5": "6b970410cf26",
+"g3": "2c97ae3f1640"
 }
 },
 {
-"pid": "vp229",
-"action": "wrapping present",
-"text": "A vibrant patchwork of wrapping paper unfolds in a mesmerizing display, as a large, rectangular box is meticulously adorned with an array of colorful patterns. The camera captures the intricate details of each piece, showcasing a rich tapestry of designs—from bold geometric shapes to delicate floral motifs—each seamlessly integrated into the next. The box, initially wrapped in a solid blue, transforms into a kaleidoscope of hues as additional layers of paper are carefully applied, creating a striking contrast against the dark background. The scene is illuminated by soft, diffused lighting that accentuates the textures and colors, while the camera remains static, allowing the viewer to fully appreciate the artistry of this wrapping process. This visual feast culminates in a harmonious blend of patterns, embodying the essence of creativity and craftsmanship.",
-"ref": "890696ba528c",
+"pid": "vp233",
+"action": "punching bag",
+"text": "A dynamic close-up captures a focused individual in a sleek black t-shirt, their muscular arms poised to strike a heavy punching bag suspended from the ceiling. The camera remains steady, framing the scene with a shallow depth of field that blurs the background, enhancing the intensity of the moment. As the person's right arm extends, the bag swings dramatically, revealing the force of their jab, which is followed by a powerful hook, each impact resonating with precision. The bag's movement creates a striking visual rhythm, while the individual's unwavering gaze and determined expression convey their commitment to the exercise. The lighting is soft and even, casting a subtle glow on the sweat glistening on their skin, accentuating the physicality of the workout. This cinematic portrayal immerses viewers in the raw power and focus of a boxing training session.",
+"ref": "302b2526d702",
 "b": {
-"g7": "57afa384ca87",
-"g8": "809e4d987757",
-"g2": "0ee1a92730f9",
-"g5": "79beb968562e"
-}
-},
-{
-"pid": "vp231",
-"action": "hammerthrow",
-"text": "In a breathtaking outdoor setting, a skilled athlete stands poised, clad in a sleek black and white athletic uniform, their focus unwavering as they prepare to hurl a gleaming hammer. The camera captures the moment with a static shot, allowing the viewer to fully appreciate the athlete's powerful stance, their right arm extended, the hammer's polished metal head glinting in the sunlight. As the athlete begins their throw, the hammer rotates gracefully, its head spinning in a mesmerizing blur against the backdrop of a clear blue sky, devoid of clouds. The camera remains fixed, emphasizing the athlete's unwavering concentration and the dynamic motion of the hammer, which arcs through the air with precision. The scene is bathed in natural light, enhancing the vivid colors of the athlete's uniform and the striking contrast of the hammer against the sky, creating a captivating visual narrative of strength and skill.",
-"ref": "d69683a2a629",
-"b": {
-"g7": "6e5cb781c394",
-"g8": "ff267d172355",
-"g2": "d56cb6f4872e",
-"g5": "e6ebfd242b37"
+"g7": "1daf810ae79d",
+"g8": "573ae571a425",
+"g2": "64076fd53908",
+"g5": "486497913783",
+"g3": "1fedda72601d"
 }
 },
 {
@@ -441,19 +399,8 @@
 "g7": "5371ccc0df4c",
 "g8": "a7635a563d72",
 "g2": "39e8fd4652dd",
-"g5": "6269c5a78a29"
-}
-},
-{
-"pid": "vp251",
-"action": "kicking soccer ball",
-"text": "In a sun-drenched urban landscape, a young boy in a vibrant red t-shirt and blue shorts stands poised before a weathered brick wall, his eyes fixed on a soccer ball at his feet. The camera captures the scene in a static medium shot, allowing the viewer to immerse themselves in the boy's focused determination as he expertly kicks the ball, sending it soaring towards the wall with a powerful strike. The ball ricochets off the bricks, its trajectory tracing a graceful arc before returning to the boy, who deftly catches it with a confident smile. The background, a blend of lush greenery and distant buildings, enhances the serene atmosphere, while the soft, golden-hour light bathes the scene in a warm glow, accentuating the boy's joyful expression and the dynamic interplay of the ball against the wall. This moment encapsulates the essence of youthful exuberance and the simple pleasures of play.",
-"ref": "358f5b957461",
-"b": {
-"g7": "bf93341defdc",
-"g8": "0c2f9ddea8a9",
-"g2": "f7af1a212039",
-"g5": "23b4870de461"
+"g5": "6269c5a78a29",
+"g3": "12db92aa4221"
 }
 },
 {
@@ -465,7 +412,21 @@
 "g7": "06a17ba4e5d9",
 "g8": "e8a9b7dbd683",
 "g2": "a63e6e6f707c",
-"g5": "24bc14c0e5ef"
+"g5": "24bc14c0e5ef",
+"g3": "ec3b5d3692be"
+}
+},
+{
+"pid": "vp255",
+"action": "popping balloons",
+"text": "In a vivid tableau, a water balloon explodes against a textured brick wall, its vibrant blue hue contrasting sharply with the warm, earthy tones of the masonry. The scene opens with a close-up of the balloon, its surface glistening under soft, diffused lighting that accentuates the water's clarity. As the balloon makes contact, it bursts into a mesmerizing cascade of droplets, each one catching the light and shimmering like tiny jewels. The water flows down the wall, leaving a striking wet mark that glistens against the rough texture, while the camera remains static, capturing the dynamic interplay of light and water. This moment of serene destruction is a visual symphony, showcasing the beauty of nature's elements in a captivating, slow-motion dance.",
+"ref": "b157dc545470",
+"b": {
+"g7": "66d3e71d2611",
+"g8": "01ff40b28804",
+"g2": "90403d63eaa1",
+"g5": "5582c8a35ba3",
+"g3": "255b11008945"
 }
 },
 {
@@ -477,19 +438,34 @@
 "g7": "0520457ba3a0",
 "g8": "e36ea3643a75",
 "g2": "4d226e4e0b61",
-"g5": "359a819c0feb"
+"g5": "359a819c0feb",
+"g3": "e2fdfbc6d5be"
 }
 },
 {
-"pid": "vp287",
-"action": "attaching something onto something",
-"text": "In a sunlit classroom, a young student, clad in a light blue shirt and dark pants, stands before a corkboard adorned with a vibrant poster. The poster, featuring a striking image of a person in a red shirt, captures the viewer's attention with its bold colors and dynamic design. The student, with short hair and a focused expression, meticulously secures the poster to the corkboard using a series of colorful pushpins, each one a burst of color against the neutral backdrop. The camera remains static, framing the student's upper body and the poster, allowing the viewer to appreciate the meticulous process of attachment. The soft, natural light bathes the scene, enhancing the poster's vibrancy and creating a serene atmosphere, while the subtle hum of the classroom hints at the presence of other students, enriching the narrative of academic engagement.",
-"ref": "0a94178dbd94",
+"pid": "vp259",
+"action": "smashing",
+"text": "In a dramatic close-up, a baseball bat swings with powerful precision, its polished wooden surface glinting under the bright studio lights. The camera captures the bat's trajectory in slow motion, revealing the tension as it hurtles towards a glass bottle, poised on a flat surface. The bottle, a dark green soda bottle, stands as a stark contrast to the bat's sleek design, its label reflecting the intense lighting. As the bat makes contact, the glass shatters into a mesmerizing array of shards, each fragment glinting like tiny diamonds as they scatter in all directions. The camera remains static, allowing the viewer to fully absorb the explosive force of the impact, while the background fades to a soft blur, emphasizing the raw power of the moment. This cinematic tableau showcases the artistry of destruction, capturing the essence of a high-impact, slow-motion sequence.",
+"ref": "b17394a85910",
 "b": {
-"g7": "b2ca3667c322",
-"g8": "0c0faf73615c",
-"g2": "029ad0a760c6",
-"g5": "8a20f9f4e1ba"
+"g7": "f0f96877c047",
+"g8": "10a5aec79db8",
+"g2": "c6dfa1cea733",
+"g5": "45cb9099c2f6",
+"g3": "7269c520f110"
+}
+},
+{
+"pid": "vp295",
+"action": "something falling like a feather or paper",
+"text": "In a serene, sunlit landscape, a child's vibrant kite drifts gracefully through the sky, its colorful design and intricate patterns catching the eye. The kite, adorned with a striking red and white pattern, features a prominent red cross and a playful cartoon character, embodying the joy of childhood. As it glides effortlessly, the camera captures its descent from a high vantage point, revealing the expansive blue sky and the gentle sway of the kite's tail. The scene is framed by a lush, green tree, its branches reaching out as if to embrace the kite, creating a striking contrast against the azure backdrop. The kite's descent slows, and it gently comes to rest on the tree, its strings dangling, hinting at a moment of playful exploration. The static camera captures this tranquil tableau, inviting viewers to share in the simple delight of a child's adventure.",
+"ref": "73d5a7d4a1e6",
+"b": {
+"g7": "a30c6d2d2031",
+"g8": "2762d930ce5c",
+"g2": "6b18881fc3ed",
+"g5": "c97403ec740b",
+"g3": "83211164a2c7"
 }
 },
 {
@@ -501,7 +477,8 @@
 "g7": "4bc23435aa7c",
 "g8": "77f1655b9192",
 "g2": "97369c8e7ac3",
-"g5": "e9f848e157d5"
+"g5": "e9f848e157d5",
+"g3": "bc344a148195"
 }
 },
 {
@@ -513,7 +490,8 @@
 "g7": "c1188f702e61",
 "g8": "150dae97f912",
 "g2": "3dd083e59a44",
-"g5": "51a9d98c9398"
+"g5": "51a9d98c9398",
+"g3": "a39c46cbdc4d"
 }
 },
 {
@@ -525,43 +503,8 @@
 "g7": "524d07b7b2cd",
 "g8": "32780246c0c6",
 "g2": "a3a57094fa7c",
-"g5": "d52c0f75cd3f"
-}
-},
-{
-"pid": "vp334",
-"action": "playing ice hockey",
-"text": "In a thrilling hockey match, the camera captures a dynamic moment as a player in a vibrant red jersey, adorned with the number 15, lunges forward in a desperate attempt to retrieve the puck. The ice glistens under the bright arena lights, reflecting the intensity of the game. As he dives, his body extends in a graceful arc, his gloved hands outstretched, fingers splayed in a futile effort to grasp the elusive puck. The camera, positioned at a low angle, accentuates the player's agility and determination, while the blurred background hints at the frenetic energy of the surrounding players. The scene is punctuated by the player's dramatic fall, his body sprawling across the ice, as he struggles to regain control. The atmosphere is electric, with the audience's cheers echoing through the air, enhancing the palpable tension of this high-stakes moment.",
-"ref": "9e2ca82cd200",
-"b": {
-"g7": "aefeb5ce0069",
-"g8": "6445353b39ef",
-"g2": "44599f37205d",
-"g5": "c0565732528c"
-}
-},
-{
-"pid": "vp374",
-"action": "tying knot (not on a tie)",
-"text": "In a serene, softly lit studio, two pieces of fabric—one a rich, deep blue and the other a vibrant, bold red—are meticulously prepared for a demonstration of knot-tying. The camera, positioned at a static angle, captures the fabric's textures and colors with striking clarity, as the blue fabric, slightly longer, is draped over the red, creating a striking visual contrast. A skilled hand, clad in a light-colored glove, enters the frame, expertly manipulating the fabric with precision. The hand deftly folds the blue fabric over the red, ensuring a secure overlap, then begins to form an overhand knot, the fingers moving with deliberate grace. As the knot tightens, the fabric's edges align perfectly, showcasing the artistry of the technique. The final result is a beautifully tied fabric, showcasing the elegance of simplicity in craftsmanship, all set against a backdrop of soft, diffused light that enhances the scene's tranquility.",
-"ref": "d2e26c21286f",
-"b": {
-"g7": "62729437ee7d",
-"g8": "eaf921dca2f7",
-"g2": "c2510342a5fa",
-"g5": "e2b663814961"
-}
-},
-{
-"pid": "vp375",
-"action": "long jump",
-"text": "In a sun-drenched outdoor setting, a dynamic sports event unfolds, captured with cinematic precision. The scene opens with a close-up of a determined athlete clad in a sleek black and white outfit, their face obscured by a helmet, as they stride purposefully towards the starting line. The camera, held steady, captures the tension in the air as the athlete approaches the runway, their movements fluid and focused. As they reach the edge, the athlete's body language shifts, signaling an impending burst of speed. With a powerful push-off, they accelerate, their legs propelling them forward with explosive force. The camera, now in slow motion, accentuates the athlete's agility as they soar through the air, legs splayed wide in a graceful arc, embodying the essence of a high jump. The background blurs into a vibrant tapestry of spectators and the expansive sky, enhancing the sense of exhilaration and triumph as the athlete lands with a controlled, confident grace, marking a successful completion of their challenging feat.",
-"ref": "2a19ecd65292",
-"b": {
-"g7": "e01309cff57e",
-"g8": "73be612b99ce",
-"g2": "b3e9281fa73d",
-"g5": "9a035d3c8f71"
+"g5": "d52c0f75cd3f",
+"g3": "745e7ae2c375"
 }
 },
 {
@@ -573,7 +516,8 @@
 "g7": "bc834f5486f0",
 "g8": "f370e3f96efc",
 "g2": "f5ec45af11ec",
-"g5": "22a2931b121d"
+"g5": "22a2931b121d",
+"g3": "26dbc4ed86ce"
 }
 },
 {
@@ -585,103 +529,47 @@
 "g7": "45011e1c20e6",
 "g8": "519b23235a6e",
 "g2": "edd2452fa70d",
-"g5": "7bf31f5fe403"
+"g5": "7bf31f5fe403",
+"g3": "f7d265d41651"
 }
 },
 {
-"pid": "vp400",
-"action": "burying something in something",
-"text": "In a sun-drenched backyard, a skilled individual clad in a dark blue shirt and a wide-brimmed hat kneels on the grass, their focus unwavering as they engage in a meticulous task. The camera captures a close-up of their hands, gloved in dark blue, as they expertly wield a post hole digger, its metal blades glinting in the golden-hour light. With each deliberate motion, they dig into the earth, creating a perfectly circular hole that deepens with each rotation. The surrounding grass, lush and vibrant, contrasts beautifully with the rich brown soil, while the backdrop reveals a serene landscape, hinting at a tranquil suburban setting. As the hole reaches its desired depth, the individual carefully places a sturdy wooden fence post into the earth, ensuring it stands firm. With precision, they pack the soil around the post, using a trowel to create a solid foundation, embodying the art of craftsmanship in this intimate portrayal of manual labor.",
-"ref": "30d303c1415e",
+"pid": "vp402",
+"action": "stuffing something into something",
+"text": "In a serene library, a dedicated librarian, clad in a crisp white shirt and a vibrant red tie, meticulously arranges books on a towering wooden shelf. The camera captures the scene from a static angle, focusing on the librarian's hands as they deftly slide each book into its designated slot, creating a harmonious display of knowledge. The shelves, adorned with an array of colorful spines, reflect the rich tapestry of literature, while the soft, diffused lighting bathes the scene in a warm glow, enhancing the cozy atmosphere. As the librarian's hands glide gracefully from one book to the next, the camera subtly shifts to reveal the growing collection, each book a testament to the librarian's dedication. The background, a blur of shelves and the faint outline of a window, adds depth to the tranquil setting, inviting viewers into a world of quiet contemplation and the art of organization.",
+"ref": "4b74230dad78",
 "b": {
-"g7": "cc769ddb035d",
-"g8": "eae0e4b73f68",
-"g2": "b26a588d459a",
-"g5": "fe46a1e4948e"
+"g7": "079d6b781244",
+"g8": "c11b71f74907",
+"g2": "51d22a3e5617",
+"g5": "e9ed5ab6d2cf",
+"g3": "1d4c9bf32843"
 }
 },
 {
-"pid": "vp413",
-"action": "swimming",
-"text": "In a serene, sunlit pool, a swimmer glides effortlessly through the water, showcasing the graceful art of backstroke. The camera captures a static, wide-angle view, framing the swimmer's rhythmic movements as they slice through the crystal-clear water, their arms extending and retracting in a fluid, synchronized motion. The swimmer's legs kick with precision, creating a mesmerizing ripple effect that dances across the surface. The pool's pristine blue tiles reflect the bright sunlight, casting a warm glow that enhances the tranquil atmosphere. The swimmer's focused expression and relaxed posture embody the essence of a professional athlete, while the absence of distractions allows the viewer to fully immerse in the beauty of this solitary pursuit, celebrating the harmony of human movement and water.",
-"ref": "e81ec10c38b4",
+"pid": "vp430",
+"action": "skijet",
+"text": "In a breathtaking display of aquatic power, a sleek ski jet glides through the tranquil waters, its vibrant red and white hull contrasting beautifully against the shimmering blue backdrop. The camera captures a close-up of the jet's powerful propeller, a whirlwind of motion as it churns through the water, creating a mesmerizing vortex that dances with the sunlight. The propeller's blades, sharp and dynamic, slice through the surface, leaving a trail of frothy white water that swirls and dissipates in the wake. The static camera angle, positioned slightly above the jet, accentuates the propeller's relentless rotation, while the surrounding water remains undisturbed, highlighting the jet's precision and control. This cinematic moment encapsulates the thrill of aquatic adventure, inviting viewers to marvel at the raw power and grace of this high-speed watercraft.",
+"ref": "8ae8250927a3",
 "b": {
-"g7": "ecaee4755d0a",
-"g8": "9fe657c44e67",
-"g2": "079a6fb27a05",
-"g5": "440537bc691f"
+"g7": "f30dd807c337",
+"g8": "882c9b6b04e9",
+"g2": "f097fbdf4a85",
+"g5": "707a79a189ea",
+"g3": "032b7a983da1"
 }
 },
 {
-"pid": "vp426",
-"action": "bobsledding",
-"text": "A thrilling bobsled race unfolds on a sleek, icy track, where a gleaming bobsled, adorned with vibrant red and white stripes, hurtles down a steep, narrow ramp. The camera captures the dynamic launch from a static position, showcasing the sled's powerful acceleration as it glides effortlessly along the polished ice. The bobsled's sleek design, featuring a large, circular front wheel and a compact rear section, is accentuated by the bright red and white stripes that contrast beautifully against the pristine white ice. As the sled gains momentum, it gracefully navigates the track, its speed and agility evident in the blurred motion of the surrounding environment. The camera remains fixed, allowing viewers to fully appreciate the exhilarating force of the launch, while the absence of other competitors emphasizes the focus on this breathtaking start.",
-"ref": "ef9c66c3a9ba",
+"pid": "vp442",
+"action": "riding unicycle",
+"text": "In a serene outdoor setting, a solitary figure clad in a vibrant red jacket and black pants gracefully navigates a narrow, winding path on a sleek black unicycle. The camera captures the scene with a static shot, allowing the viewer to fully appreciate the rider's skill and balance as they glide effortlessly forward. The background features a lush green landscape, with a hint of a distant building, enhancing the tranquil atmosphere. As the rider approaches the camera, they suddenly halt, their right foot firmly planting on the ground to maintain stability. This moment of pause, marked by a subtle shift in posture, highlights the rider's agility and control. With a fluid motion, they resume their journey, the unicycle rolling smoothly beneath them, embodying a harmonious blend of skill and grace.",
+"ref": "99b636aaa8de",
 "b": {
-"g7": "91f58dfbd15e",
-"g8": "11fd09332c0a",
-"g2": "69afc4357d9f",
-"g5": "2dedc0b74b5a"
-}
-},
-{
-"pid": "vp432",
-"action": "",
-"text": "A mesmerizing close-up captures the intricate dance of sand as it cascades over a stunning stained-glass window, revealing the delicate lead framework beneath. The camera remains static, focusing on a small section of the window, where vibrant blue and green glass fragments are gradually unveiled, their edges glistening with the remnants of sand. Each grain, illuminated by soft, diffused light, creates a dynamic interplay of shadows and highlights, enhancing the textural depth of the glass. As the sand flows, it exposes the intricate lead lines, which crisscross the surface, adding a layer of geometric elegance. The scene is devoid of human presence, allowing the viewer to fully immerse in the serene beauty of this artistic process, where the interplay of light and material creates a captivating visual narrative.",
-"ref": "c0ea4e971a3f",
-"b": {
-"g7": "230bc8c1e325",
-"g8": "72cb4e91edf9",
-"g2": "253d2674a125",
-"g5": "fbcf49537c12"
-}
-},
-{
-"pid": "vp433",
-"action": "hoverboarding",
-"text": "In a sleek, modern indoor setting, a skilled hoverboard rider captivates the audience with a breathtaking 360-degree spin. The polished wooden floor reflects the soft, ambient lighting, enhancing the dynamic energy of the performance. Dressed in a stylish black jacket and dark pants, the rider exudes confidence as they effortlessly glide forward, their feet firmly planted on the hoverboard. With a fluid motion, they initiate a smooth spin, their body gracefully twisting in mid-air, showcasing exceptional balance and control. The camera captures this mesmerizing feat from a static position, allowing viewers to fully appreciate the rider's mastery of the hoverboard, while the serene backdrop emphasizes the artistry of the moment. This cinematic portrayal celebrates the thrill of extreme sports, inviting viewers to marvel at the rider's skill and the elegance of the performance.",
-"ref": "015277798e14",
-"b": {
-"g7": "1994d62117f7",
-"g8": "487e6a18e71c",
-"g2": "06ea76f4bfe2",
-"g5": "e1a1af2eebd8"
-}
-},
-{
-"pid": "vp436",
-"action": "peeling fruit",
-"text": "In this captivating culinary demonstration, a vibrant yellow lemon takes center stage, its glossy skin glistening under the warm, golden-hour glow of a high-end kitchen. The camera, expertly positioned, captures the delicate interplay of light and shadow as a skilled hand, adorned with a crisp white glove, gracefully slices the lemon in half, revealing its juicy, pale yellow flesh and a cluster of tiny, dark seeds. With precision, the hand expertly peels away the skin, exposing the bright, segmented interior, each section glistening with freshness. The camera remains steady, allowing viewers to appreciate the intricate details of the fruit's structure, while the soft, ambient lighting enhances the scene's inviting atmosphere. This moment is a celebration of culinary artistry, showcasing the beauty and simplicity of a lemon's transformation.",
-"ref": "ad0e52eeadbb",
-"b": {
-"g7": "a897c8533541",
-"g8": "36fe285d8561",
-"g2": "f75aab37b937",
-"g5": "a57409aa7975"
-}
-},
-{
-"pid": "vp441",
-"action": "welding",
-"text": "In a dimly lit industrial workshop, a skilled welder clad in a protective blue jumpsuit and a striking red helmet stands poised over a large, flat steel sheet. The camera captures a close-up of the welder's hands, gloved in black, as they expertly manipulate a plasma cutter, its bright blue arc illuminating the scene with a mesmerizing glow. The cutter's tip, a brilliant white-hot point, sizzles against the metal, creating a clean, precise cut that reveals the raw, untouched surface beneath. The welder's steady, focused movements are accentuated by the dramatic chiaroscuro lighting, casting deep shadows that enhance the intensity of the moment. The background remains softly blurred, allowing the viewer to fully immerse in the intricate dance of sparks and the artistry of metalwork, as the welder's dedication to precision and safety unfolds in this captivating visual narrative.",
-"ref": "0f69c44a2afa",
-"b": {
-"g7": "ba16f4e46039",
-"g8": "627c2be40322",
-"g2": "17981aba22d9",
-"g5": "e8b4a5622a66"
-}
-},
-{
-"pid": "vp446",
-"action": "playing cricket",
-"text": "In a thrilling moment of cricket, a batsman stands poised at the crease, his powerful stance radiating confidence as he grips the bat with unwavering focus. The camera captures the dynamic interplay of light and shadow, highlighting the batsman's intense concentration as he prepares to face the incoming ball. The background blurs into a vibrant tapestry of spectators, their cheers echoing through the air, while the lush green outfield stretches beyond the boundary rope. As the bowler releases the ball, the batsman swings with precision, the bat connecting with a resounding crack, sending the ball soaring high into the sky. The camera tracks the ball's trajectory, capturing its graceful arc as it clears the boundary rope, signaling a triumphant six. The batsman's triumphant celebration is framed against the backdrop of a jubilant crowd, their excitement palpable, as the scene unfolds in a cinematic blend of action and emotion.",
-"ref": "9ee34e35dea4",
-"b": {
-"g7": "15f9287d3aaa",
-"g8": "cf373c821c5b",
-"g2": "7c410d60ed80",
-"g5": "e46f010a6426"
+"g7": "4b73f09ab460",
+"g8": "725fa6647cc0",
+"g2": "b7a606e3f02e",
+"g5": "69703981d63b",
+"g3": "0f7ab5d4b759"
 }
 },
 {
@@ -693,7 +581,8 @@
 "g7": "7d0a3d7353ff",
 "g8": "c6398a00599b",
 "g2": "7451cce19fd2",
-"g5": "19dd51f727e9"
+"g5": "19dd51f727e9",
+"g3": "b5a3cffe211c"
 }
 },
 {
@@ -705,19 +594,21 @@
 "g7": "34c805175cb6",
 "g8": "c25f07291ece",
 "g2": "35e9f00f24f4",
-"g5": "b710199d665d"
+"g5": "b710199d665d",
+"g3": "c57bfb08ed15"
 }
 },
 {
-"pid": "vp453",
-"action": "spinning something so it continues spinning",
-"text": "In a serene, minimalist setting, a glass globe rests on a sleek, dark wooden surface, its smooth, reflective surface catching the soft, diffused light that bathes the scene in a warm glow. The globe, intricately crafted with a delicate, metallic base, spins gracefully on its axis, revealing a mesmerizing world map etched in vibrant colors. As the camera remains static, the globe's rotation is captured in a smooth, continuous motion, showcasing the intricate details of landmasses and oceans. The subtle interplay of light and shadow dances across the globe's surface, enhancing the depth of the map and the rich textures of the wood beneath. This cinematic moment, devoid of distractions, invites viewers to immerse themselves in the beauty of the spinning globe, evoking a sense of exploration and wonder.",
-"ref": "c1356dfb1e6f",
+"pid": "vp462",
+"action": "pizzatossing",
+"text": "In a vibrant kitchen setting, a rectangular pizza base, its golden-brown crust glistening with a thin layer of sauce, becomes the centerpiece of a dynamic culinary performance. The camera captures the scene from a static angle, focusing on the base as it transitions from a flat rectangle to a perfectly rounded circle. A skilled chef, clad in a crisp white shirt and a black apron, expertly tosses the pizza base into the air with a fluid, practiced motion, each throw revealing the dough's elasticity and resilience. As the base soars, it catches the light, showcasing its delicate texture and the artistry of its preparation. With each toss, the edges become increasingly rounded, transforming the rectangular shape into a near-perfect circle, a testament to the chef's mastery. The background, a soft blur of kitchen equipment, enhances the focus on the mesmerizing dance of dough and skill, culminating in a final toss that captures the essence of culinary artistry.",
+"ref": "3e0192145041",
 "b": {
-"g7": "1d321aac81d2",
-"g8": "d63404e455e2",
-"g2": "05a6e50ab1a0",
-"g5": "ac1c2bb5d056"
+"g7": "16f0a06ffa64",
+"g8": "89f01385c09e",
+"g2": "6b4ed82fc7b1",
+"g5": "7bbf4dce995a",
+"g3": "489a056775e5"
 }
 },
 {
@@ -729,31 +620,21 @@
 "g7": "ffa6076cee73",
 "g8": "dd92753034da",
 "g2": "09ce24110fd9",
-"g5": "93599d29ba14"
+"g5": "93599d29ba14",
+"g3": "1d6ea561fdba"
 }
 },
 {
-"pid": "vp465",
-"action": "squeezing something",
-"text": "In a serene bathroom setting, a person clad in a light blue shirt and dark pants stands before a sleek white sink, the soft glow of natural light filtering through a nearby window. The camera captures a close-up of their hands, one gently squeezing a vibrant blue toothpaste tube, while the other holds a pristine white toothbrush, poised to receive the creamy substance. As the tube is squeezed, a steady stream of toothpaste flows onto the bristles, creating a mesmerizing cascade of blue that contrasts beautifully with the white brush. The scene is bathed in a warm, inviting light, enhancing the textures of the toothpaste and the brush, while the background remains softly blurred, drawing the viewer's focus to the meticulous act of oral hygiene. The static camera angle ensures a clear view of the process, capturing the rhythmic motion of the hands and the satisfying result of a perfectly coated toothbrush.",
-"ref": "90a376a12533",
+"pid": "vp469",
+"action": "letting something roll along a flat surface",
+"text": "In a sleek, modern bowling alley, a polished wooden lane stretches towards a vibrant backdrop of colorful bowling pins, meticulously arranged in a classic triangle formation. The camera captures a close-up of a gleaming bowling ball, its smooth surface reflecting the warm, ambient lighting that bathes the scene in a golden-hour glow. As the ball begins its descent, it glides effortlessly down the lane, its trajectory perfectly aligned with the pins. The camera remains static, allowing the viewer to fully appreciate the ball's steady roll, while the pins stand poised, ready for impact. The atmosphere is charged with anticipation, as the ball's momentum builds, culminating in a satisfying collision that sends the pins scattering in a dynamic display of force and precision. This cinematic moment encapsulates the thrill of bowling, showcasing the artistry of the sport in a visually striking manner.",
+"ref": "1556a809fc66",
 "b": {
-"g7": "890f88a20fa1",
-"g8": "f04d9e2bcbec",
-"g2": "f54b405d15e3",
-"g5": "b245722f25d7"
-}
-},
-{
-"pid": "vp467",
-"action": "sharpening pencil",
-"text": "In a dimly lit garage, a skilled mechanic clad in a dark blue shirt and a cap stands poised over a workbench, his hands deftly wielding a utility knife. The camera captures a close-up of his focused expression as he meticulously sharpens a pencil, the blade glinting under the soft, ambient light. The scene is bathed in a warm, golden-hour glow, enhancing the textures of the tools and the worn surfaces of the workbench. As he expertly slices through the pencil's tip, the camera remains steady, allowing the viewer to appreciate the precision of his movements. The background is softly blurred, drawing attention to the intricate details of the sharpening process, while the subtle hum of the garage fades into the background, creating an immersive atmosphere that celebrates the artistry of manual craftsmanship.",
-"ref": "c7870d3459d1",
-"b": {
-"g7": "66d7e0010ccc",
-"g8": "4ffc3f2609ff",
-"g2": "4277035fdf33",
-"g5": "7618e1f29d00"
+"g7": "f69943740dc9",
+"g8": "4cf74e693e05",
+"g2": "b1c58b68ea0f",
+"g5": "de9cd77966e3",
+"g3": "d575767fb095"
 }
 },
 {
@@ -765,103 +646,47 @@
 "g7": "ab91441d5065",
 "g8": "398c11178778",
 "g2": "cd816e1fedaa",
-"g5": "cfde6c497602"
+"g5": "cfde6c497602",
+"g3": "61138d9b0c2c"
 }
 },
 {
-"pid": "vp475",
-"action": "sewing",
-"text": "In a softly lit sewing room, a skilled seamstress, clad in a light blue shirt and a patterned headscarf, is captured in a close-up as she meticulously sews a vibrant red fabric. The camera, held steady, focuses on her hands, which deftly manipulate the fabric, pulling it taut with her left hand while her right guides a needle through the material, creating a straight seam. The fabric, a rich red with intricate white patterns, glimmers under the warm, diffused lighting, enhancing the textures and colors. The background is softly blurred, allowing the viewer to fully immerse in the craftsmanship, as the seamstress's fingers dance with precision, embodying the art of tailoring. This intimate portrayal of her focused dedication to her work evokes a sense of tranquility and skill, inviting the audience to appreciate the beauty of manual craftsmanship.",
-"ref": "3c5da8147976",
+"pid": "vp486",
+"action": "roller skating",
+"text": "In a sun-drenched outdoor rink, two skaters glide gracefully, their vibrant red and blue outfits contrasting against the pristine white ice. The camera captures a dynamic close-up of their legs, showcasing the intricate details of their skates and the subtle movements of their feet as they execute a series of elegant turns. Suddenly, their skates tangle in a moment of unexpected contact, the red-clad skater's leg wrapping around the blue-clad skater's ankle. The tension is palpable as they struggle to untangle, their bodies leaning forward in a desperate attempt to regain balance. The blue-clad skater, with a determined expression, manages to free their foot, and both skaters separate, each regaining their composure with a slight stumble. The scene is bathed in soft, natural light, enhancing the crispness of the ice and the vivid colors of their attire, while the static camera captures every nuance of their struggle, creating a vivid tableau of athletic grace and resilience.",
+"ref": "aa2cf872703a",
 "b": {
-"g7": "c8841cc57e42",
-"g8": "939401f02986",
-"g2": "3735428f38fa",
-"g5": "4d4cc9af44d5"
+"g7": "049887c174a4",
+"g8": "b8150207e3f6",
+"g2": "fcba5cb286fa",
+"g5": "4f2b65ea00a4",
+"g3": "769449b89589"
 }
 },
 {
-"pid": "vp477",
-"action": "squeezing something",
-"text": "In a rustic kitchen, a person clad in a light blue shirt and a dark blue apron stands at a wooden counter, their hands deftly manipulating a large, white flour bag. The camera captures a close-up of their hands, revealing the tension as they squeeze the bag, causing a cascade of flour to erupt from a small tear at the top. The flour billows like a soft cloud, creating a mesmerizing dance of white particles against the warm, earthy tones of the wooden surface. The lighting is soft and diffused, enhancing the texture of the flour and the counter, while the background remains subtly blurred, drawing focus to the intricate details of the flour's movement. This intimate portrayal of a simple yet vital kitchen task is elevated by the artistry of cinematography, transforming a mundane moment into a visually captivating experience.",
-"ref": "cd1f4560f85d",
+"pid": "vp505",
+"action": "javelin throw",
+"text": "In this cinematic close-up, the camera captures the intense focus of a javelin thrower's hand as it grips the weapon, poised for release. The scene opens with a tight shot of the athlete's gloved hand, adorned with a striking red and white pattern, showcasing the intricate details of the javelin's shaft and its sharp, pointed tip. As the athlete's fingers tighten, the camera remains steadfast, emphasizing the tension and precision of the moment. With a sudden burst of energy, the hand releases the javelin, and the camera smoothly transitions to track its flight, revealing the athlete's determined expression as they follow through with their throw. The background blurs into a soft, out-of-focus landscape, enhancing the focus on the javelin's trajectory and the athlete's unwavering commitment to the sport.",
+"ref": "9e84bdbd16af",
 "b": {
-"g7": "f12dbd185d35",
-"g8": "d182171acff0",
-"g2": "e319ee7e6dae",
-"g5": "dba735d69119"
+"g7": "74e4e1c2dfce",
+"g8": "44246ca29244",
+"g2": "3f8f3972fcb3",
+"g5": "70f5b2b238db",
+"g3": "6b0fc7e29282"
 }
 },
 {
-"pid": "vp479",
-"action": "folding paper",
-"text": "In a serene, softly lit room, a pair of hands gracefully unfolds a delicate map, revealing intricate details of a coastal landscape. The camera captures the intimate moment with a shallow depth of field, drawing the viewer's focus to the delicate creases and folds of the paper, which evoke a sense of anticipation. As the hands meticulously align the edges, the map's rich textures and vibrant colors—including deep blues and greens—come alive, hinting at a journey yet to unfold. The steady, deliberate movements of the hands create a rhythmic dance, while the static camera angle maintains a consistent perspective, allowing the viewer to fully immerse in the tactile experience of map exploration. This cinematic portrayal of a simple act transforms it into a poignant narrative, inviting the audience to share in the adventure that lies ahead.",
-"ref": "9e20239d96ab",
+"pid": "vp511",
+"action": "rolling pastry",
+"text": "A skilled baker meticulously unrolls a pristine sheet of phyllo pastry, its delicate layers glistening under the warm glow of overhead lights. The camera captures the scene in a shallow depth of field, focusing on the intricate textures and subtle sheen of the pastry as it unfurls, revealing a mesmerizing interplay of light and shadow. Each layer, thin and translucent, separates with a gentle touch, showcasing the artistry of the craft. The background remains softly blurred, enhancing the focus on the pastry's delicate beauty. As the baker's hands expertly manipulate the dough, the camera remains static, allowing viewers to immerse themselves in the rhythmic dance of rolling and stretching, culminating in a breathtaking display of culinary finesse.",
+"ref": "a85924e1dd8f",
 "b": {
-"g7": "a7267c4addbb",
-"g8": "0d3bd1e8a366",
-"g2": "6d3db833ea7e",
-"g5": "62d0dc832088"
-}
-},
-{
-"pid": "vp490",
-"action": "pole vault",
-"text": "In a dramatic moment of athletic prowess, a pole vaulter launches into the air, their powerful legs propelling them skyward as they grasp the pole with unwavering determination. The camera captures the scene from a low angle, emphasizing the tension and grace of their ascent, with the pole vaulting bar looming ominously above. As the athlete reaches the apex of their jump, the pole bends dramatically, hinting at the immense force exerted. Suddenly, the bar topples over, signaling a failed attempt, yet the athlete's resolve remains unbroken. The backdrop of a vibrant stadium, filled with spectators, enhances the atmosphere, while the static camera maintains a steady focus on the critical moment, allowing viewers to fully absorb the thrill of this high-stakes competition.",
-"ref": "778abb8a0e1d",
-"b": {
-"g7": "176747780206",
-"g8": "e3353c1aeb30",
-"g2": "7ae61b8d6340",
-"g5": "230b52c4e11f"
-}
-},
-{
-"pid": "vp494",
-"action": "welding",
-"text": "In a dimly lit workshop, a large, abstract metal sculpture looms, its intricate latticework of metal bars and plates forming a complex, industrial art piece. The camera captures the sculpture from a low angle, emphasizing its imposing scale and the delicate interplay of light and shadow that dance across its surface. As the scene unfolds, a skilled welder, clad in a protective helmet and gloves, meticulously works on the sculpture, the bright, electric sparks of the welding torch illuminating the dark space with a mesmerizing glow. The camera remains static, allowing the viewer to fully appreciate the craftsmanship and the dynamic interplay of light and shadow, while the ambient sounds of the workshop—buzzing machinery and the crackle of welding—enhance the immersive atmosphere. This cinematic portrayal celebrates the artistry of metalwork, showcasing the transformative power of welding in the creation of this striking sculpture.",
-"ref": "902b5e3bea65",
-"b": {
-"g7": "0653b3788829",
-"g8": "2d94ef21936d",
-"g2": "7306b48c7093",
-"g5": "1e40279db8bd"
-}
-},
-{
-"pid": "vp495",
-"action": "catching or throwing softball",
-"text": "In a sun-drenched outdoor setting, a young athlete clad in a sleek black and white baseball uniform stands poised, gripping a softball with a determined expression. The camera captures a close-up of his face, framed by a vibrant green backdrop of lush grass and a striking brick wall, which serves as a striking contrast to the scene. As he winds up, the softball glows under the golden-hour light, its seams glistening as it hurtles towards the wall with a powerful throw. The ball strikes the wall at a sharp angle, ricocheting off with a satisfying thud, its trajectory clearly visible as it bounces back towards the player. The static camera holds steady, allowing the viewer to fully appreciate the dynamic interplay of the athlete's skill and the ball's trajectory, while the warm, natural light enhances the scene's cinematic quality, evoking a sense of raw athleticism and precision.",
-"ref": "ab0710693ec9",
-"b": {
-"g7": "b9771fe831c7",
-"g8": "abeeda02ba02",
-"g2": "c4f13a2de0b8",
-"g5": "9311beb03742"
-}
-},
-{
-"pid": "vp504",
-"action": "making snowman",
-"text": "In a serene winter landscape, a young child, bundled in a cozy blue jacket and a knitted hat, kneels beside a freshly sculpted snowman, their gloved hands deftly maneuvering a small stick. The camera captures the intimate moment with a shallow depth of field, focusing on the child's concentrated expression as they meticulously carve intricate details into the snowman's face. The soft, diffused light of a cloudy day bathes the scene in a gentle glow, enhancing the serene atmosphere. The snowman, with its round body and broad, smiling face, stands as a charming backdrop to the child's artistic endeavor. As the child leans in, their breath visible in the crisp air, they skillfully create dimples on the snowman's cheeks, embodying the joy of creativity and the magic of winter. The static camera angle invites viewers to share in this heartwarming moment, celebrating the simple pleasures of childhood and the artistry of snow sculpting.",
-"ref": "adabb56c4248",
-"b": {
-"g7": "b0ae8c831c6a",
-"g8": "2e28fca341e8",
-"g2": "621e198eadf7",
-"g5": "52373a702724"
-}
-},
-{
-"pid": "vp509",
-"action": "pommelhorse",
-"text": "In a sun-drenched gymnasium, a male gymnast commands the pommel horse, his sleek black leotard and white shorts contrasting against the polished wooden surface. The camera captures him in a dynamic close-up, showcasing his intricate hand movements as he grips the pommel with precision, his fingers splayed and arms taut, embodying the essence of control. With a fluid grace, he transitions into a series of leg lifts, his right leg extending high above the horse, while his left leg remains firmly planted, creating a striking visual balance. The background blurs into a soft focus, accentuating his focused expression and the deliberate tension in his muscles. As he shifts his weight, the camera remains steady, allowing viewers to appreciate the artistry of his movements, culminating in a moment of stillness that underscores the mastery of his craft.",
-"ref": "e3859d3c4790",
-"b": {
-"g7": "abc5e8d04150",
-"g8": "305b3fa11fcf",
-"g2": "204c15e21257",
-"g5": "eb8742a51a8e"
+"g7": "1637bc22ac93",
+"g8": "c5be9861d6a7",
+"g2": "56b7bf0e86ff",
+"g5": "397aff8d1940",
+"g3": "477ff09b523e"
 }
 },
 {
@@ -873,19 +698,21 @@
 "g7": "5a660a97c7b1",
 "g8": "2ee89c880eaa",
 "g2": "14fcfa0f5554",
-"g5": "9980d88a716f"
+"g5": "9980d88a716f",
+"g3": "6018e39d3b72"
 }
 },
 {
-"pid": "vp530",
-"action": "rock climbing",
-"text": "A climber stands poised at the base of a towering rock face, bathed in the golden-hour glow of a clear blue sky. Dressed in a sleek black jacket and dark pants, they meticulously adjust their climbing shoes, ensuring a secure fit for the challenging ascent ahead. The camera captures a static, intimate close-up, highlighting the focused determination in their eyes and the subtle tension in their posture. As they prepare to embark on their journey, the rugged texture of the rock wall looms behind them, hinting at the technical challenges that lie ahead. The scene is enriched by the soft rustle of leaves and the distant hum of nature, creating an immersive atmosphere that invites viewers into this moment of quiet resolve.",
-"ref": "7d6b3d657dd4",
+"pid": "vp531",
+"action": "playing kickball",
+"text": "In a sun-drenched outdoor sports arena, a dynamic scene unfolds as a group of athletes, clad in vibrant blue and white jerseys, line up in a meticulously organized formation. The camera, positioned at a slight angle, captures the tension and anticipation as each player steps forward, poised to execute a powerful kick towards a designated target area. The backdrop features a striking blue and white striped barrier, enhancing the visual contrast against the lush green field. As the first player steps up, the camera remains static, allowing the viewer to absorb the precision and focus of the moment. The atmosphere is charged with camaraderie and competitive spirit, as teammates watch intently, their expressions a mix of concentration and support. The scene is bathed in warm, golden-hour light, casting soft shadows that accentuate the players' determined stances, culminating in a series of powerful kicks that resonate with the thrill of athletic prowess.",
+"ref": "e106c22d6d07",
 "b": {
-"g7": "a9dda393b318",
-"g8": "ed6491791b41",
-"g2": "2e043bb19568",
-"g5": "6aa3037741c6"
+"g7": "3f6072160161",
+"g8": "e5ff793c14e5",
+"g2": "e6b6e337c6c6",
+"g5": "3eb64bb00d9b",
+"g3": "20a7458b8868"
 }
 },
 {
@@ -897,7 +724,8 @@
 "g7": "0183c1c03fb2",
 "g8": "ccb20d374e18",
 "g2": "c45bd5275298",
-"g5": "979d100d0309"
+"g5": "979d100d0309",
+"g3": "03491954088b"
 }
 },
 {
@@ -909,19 +737,8 @@
 "g7": "104b90347ce7",
 "g8": "4b23cb12ba41",
 "g2": "8c16ec13a7cc",
-"g5": "a8bf6d1c4fdf"
-}
-},
-{
-"pid": "vp550",
-"action": "spinning something so it continues spinning",
-"text": "In a dimly lit, atmospheric casino setting, a roulette wheel takes center stage, its vibrant red and black segments glistening under the soft glow of ambient lighting. The camera captures a close-up of the wheel as it spins rapidly, the forceful motion creating a mesmerizing blur of colors. A small, metallic ball, illuminated by a subtle spotlight, bounces and ricochets across the wheel's surface, its trajectory a dance of chance and physics. As the wheel slows, the ball finds its final resting place in a numbered slot, the tension palpable in the air. The static camera angle, combined with the dynamic motion of the wheel, immerses the viewer in the thrill of the game, while the absence of human interaction enhances the focus on the wheel's hypnotic rotation, evoking a sense of suspense and anticipation.",
-"ref": "5f1b1cd13a69",
-"b": {
-"g7": "c97a81da734b",
-"g8": "b270a9b17a57",
-"g2": "c18d16bf08c5",
-"g5": "8a73b58a2b2a"
+"g5": "a8bf6d1c4fdf",
+"g3": "710b2ca3f7e6"
 }
 },
 {
@@ -933,7 +750,8 @@
 "g7": "a645ef3df24e",
 "g8": "36676ffa16df",
 "g2": "a39459a48efc",
-"g5": "56387e220bc7"
+"g5": "56387e220bc7",
+"g3": "1e1c02df1076"
 }
 },
 {
@@ -945,7 +763,8 @@
 "g7": "b9aff3d887da",
 "g8": "f39844961844",
 "g2": "0126d5b87d46",
-"g5": "a2135473b74a"
+"g5": "a2135473b74a",
+"g3": "8646abc5684c"
 }
 },
 {
@@ -957,7 +776,8 @@
 "g7": "eae3b913488f",
 "g8": "c3d5146e046e",
 "g2": "ba50c301b27d",
-"g5": "5696b6289846"
+"g5": "5696b6289846",
+"g3": "b89414fb891d"
 }
 },
 {
@@ -969,7 +789,8 @@
 "g7": "752b4062c14e",
 "g8": "87747e432706",
 "g2": "48161d421afe",
-"g5": "58b68f72950a"
+"g5": "58b68f72950a",
+"g3": "cee95fdb69cc"
 }
 }
 ]
