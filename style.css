@@ -66,3 +66,16 @@ video { width: 100%; aspect-ratio: 832 / 480; background: #000; border-radius: 8
 .start-row { margin: 22px 0 30px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
 .start-row .primary { font-size: 1.1rem; padding: 12px 26px; }
 @media (max-width: 760px) { .answers { grid-template-columns: 1fr 1fr; } }
+
+/* v3 (11-14): use the whole window. Text scales a little with screen width; the trial page is full width and the
+   video pair is sized so that prompt + both videos + answer buttons fit in one screen without scrolling. */
+html { font-size: clamp(16px, calc(0.45vw + 9px), 22px); }
+body { font-size: 1rem; }
+main { max-width: none; padding: 1rem 2.5vw; }
+#screen-instr, #screen-done { max-width: 1700px; margin: 0 auto; }
+.pair { width: 100%; margin: 8px auto 0;
+        /* 2 videos side by side at 832:480 (=1.7333) each; reserve ~28rem of height for prompt/buttons
+           (only binds on short screens, e.g. 1366x768 laptops; wide screens are width-limited) */
+        max-width: max(640px, calc((100vh - 28rem) * 3.4667 + 14px)); }
+.answers { max-width: min(1000px, 70vw); }
+@media (max-width: 760px) { .pair { max-width: none; } .answers { max-width: none; } }
