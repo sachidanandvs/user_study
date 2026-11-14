@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Video Physics Study</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="app">
+
+  <!-- ===== start ===== -->
+  <section id="screen-start" class="screen">
+    <h1>Which video is more physically realistic?</h1>
+    <p class="lead">You will watch pairs of short AI-generated videos and pick the one whose motion and
+      interactions look more <b>physically realistic</b>. It takes about <b><span class="est-min">40</span> minutes</b>.
+      Your progress is saved in this browser, so you can close the tab and come back to finish.</p>
+    <div id="resume-box" class="card hidden">
+      <p>You have an unfinished session as <b id="resume-name"></b> (<span id="resume-progress"></span> done).</p>
+      <button id="btn-resume" class="primary">Resume</button>
+      <button id="btn-discard" class="ghost">Start over as someone else</button>
+    </div>
+    <div id="name-box" class="card">
+      <label for="name">Enter any name or nickname (it only labels your answers):</label>
+      <input id="name" type="text" maxlength="40" autocomplete="off" placeholder="e.g. blue-otter">
+      <button id="btn-start" class="primary" disabled>Continue</button>
+    </div>
+    <p class="small">Participation is voluntary. We record only your answers, the name you type, timing,
+      and your browser type. Please use a laptop or desktop if possible.</p>
+  </section>
+
+  <!-- ===== instructions ===== -->
+  <section id="screen-instr" class="screen hidden">
+    <h1>What to look for</h1>
+    <p>Each trial shows a text description and <b>two videos (A and B)</b> generated from it. They play in a loop.
+      After both have played once, choose the video that is <b>more physically realistic</b>: the one whose
+      events could more plausibly happen in the real world.</p>
+
+    <h2>Signs that a video is physically unrealistic</h2>
+    <div class="examples">
+      <div class="ex"><span class="ex-ico">✨</span><div><b>Objects appear out of nowhere</b><br>A ball, a hand, or a person pops into the scene with no cause.</div></div>
+      <div class="ex"><span class="ex-ico">💨</span><div><b>Objects disappear</b><br>Something vanishes, or a thrown object is gone mid-air.</div></div>
+      <div class="ex"><span class="ex-ico">〰️</span><div><b>Rigid things bend or melt</b><br>A bat, racket, table or bottle bends, stretches, wobbles or melts like rubber.</div></div>
+      <div class="ex"><span class="ex-ico">🧲</span><div><b>Motion without a force</b><br>An object starts moving, speeds up, changes direction or stops with nothing pushing it.</div></div>
+      <div class="ex"><span class="ex-ico">🎈</span><div><b>Gravity is wrong</b><br>Things float, hover, fall upward, or fall far too slowly or too fast.</div></div>
+      <div class="ex"><span class="ex-ico">👻</span><div><b>Objects pass through each other</b><br>A hand goes through a ball, a foot sinks into the floor, objects overlap and merge.</div></div>
+      <div class="ex"><span class="ex-ico">💥</span><div><b>Collisions look wrong</b><br>No reaction on impact, a bounce in the wrong direction, or a heavy object barely affected.</div></div>
+      <div class="ex"><span class="ex-ico">🔀</span><div><b>Objects change identity or number</b><br>One object morphs into another, or 2 balls become 3.</div></div>
+      <div class="ex"><span class="ex-ico">🦵</span><div><b>Impossible bodies</b><br>Extra or merging limbs, joints bending the wrong way, a body twisting impossibly.</div></div>
+      <div class="ex"><span class="ex-ico">💧</span><div><b>Liquids, cloth, smoke behave wrong</b><br>Water that doesn't flow or fill, liquid that acts solid, cloth that moves like a rigid sheet.</div></div>
+      <div class="ex"><span class="ex-ico">❓</span><div><b>Anything else that seems physically off</b><br>Trust your intuition about how the real world works.</div></div>
+    </div>
+
+    <h2>Please keep in mind</h2>
+    <ul>
+      <li><b>Judge only physical realism.</b> Ignore image sharpness, colours, style, resolution, smoothness
+        of the frame rate, and black bars at the sides.</li>
+      <li>A video in which <b>almost nothing moves is not automatically more realistic</b>. If water is
+        being poured but never moves, or a kicked ball never leaves the foot, that is unrealistic too.</li>
+      <li>Both videos may have problems. Pick the one with <b>fewer or less severe</b> physics errors.</li>
+      <li>Use <b>"About the same"</b> only when you really can't tell them apart in realism.</li>
+      <li>Use <b>Replay</b> as often as you like. Keyboard: <kbd>A</kbd> / <kbd>S</kbd> / <kbd>B</kbd>
+        (or <kbd>←</kbd> / <kbd>↓</kbd> / <kbd>→</kbd>), <kbd>R</kbd> = replay.</li>
+    </ul>
+    <button id="btn-begin" class="primary">I understand, start</button>
+  </section>
+
+  <!-- ===== trial ===== -->
+  <section id="screen-trial" class="screen hidden">
+    <div class="topbar">
+      <div class="progress"><div id="progress-fill"></div></div>
+      <span id="progress-text"></span>
+      <button id="btn-help" class="ghost small-btn">Instructions</button>
+    </div>
+    <div class="prompt card">
+      <div class="prompt-head">Text description</div>
+      <div id="prompt-action" class="prompt-action"></div>
+      <details id="prompt-details"><summary>Show full description</summary><p id="prompt-text"></p></details>
+    </div>
+    <div class="pair">
+      <figure><div class="vlabel">A</div><video id="vA" muted playsinline loop preload="auto"></video></figure>
+      <figure><div class="vlabel">B</div><video id="vB" muted playsinline loop preload="auto"></video></figure>
+    </div>
+    <div id="loading" class="small center">Loading videos…</div>
+    <div class="controls">
+      <button id="btn-replay" class="ghost">⟲ Replay both</button>
+    </div>
+    <div class="question">Which video is more <b>physically realistic</b>?</div>
+    <div class="answers">
+      <button class="ans" data-choice="A" disabled>A is more realistic</button>
+      <button class="ans" data-choice="tie" disabled>About the same</button>
+      <button class="ans" data-choice="B" disabled>B is more realistic</button>
+    </div>
+    <div id="wait-hint" class="small center">Answer buttons unlock after both videos have played once.</div>
+  </section>
+
+  <!-- ===== done ===== -->
+  <section id="screen-done" class="screen hidden">
+    <h1>Thank you!</h1>
+    <p id="done-status" class="lead">Saving your answers…</p>
+    <p>Completion code: <code id="done-code"></code></p>
+    <div id="done-retry" class="hidden">
+      <button id="btn-retry" class="primary">Retry saving</button>
+      <button id="btn-download" class="ghost">Download my answers (backup)</button>
+      <p class="small" id="done-contact"></p>
+    </div>
+  </section>
+
+</main>
+<script src="config.js"></script>
+<script src="manifest.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
