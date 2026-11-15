@@ -6,7 +6,7 @@
   const HAS_ENDPOINT = ENDPOINT.startsWith("https://") && !ENDPOINT.includes("PASTE");
   const LS_KEY = "physstudy_v1";
   const MIN_GAP = 8;          // min trials between two appearances of the same prompt
-  const SEC_PER_TRIAL = 24;   // for the time estimate only
+  const SEC_PER_TRIAL = 12;   // time estimate only: ~5 s clip must play once + a few s to decide -> 75 trials = 15 min
 
   const $ = (id) => document.getElementById(id);
   let M = null;   // manifest
