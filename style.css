@@ -123,3 +123,8 @@ main { max-width: none; padding: 1rem 2.5vw; }
 #screen-trial .pair { column-gap: max(24px, 2.5vw); }
 #screen-trial .decide { column-gap: max(24px, 2.5vw); }
 @media (max-width: 760px) { #screen-trial .pair { row-gap: 10px; } }
+
+/* completion code box on the final screen */
+.code-box { max-width: 36em; margin: 1em 0; }
+.code-row { display: flex; align-items: center; gap: .6em; flex-wrap: wrap; margin: .3em 0; }
+.big-code { font-size: 1.6em; font-weight: 700; letter-spacing: .08em; padding: .15em .5em; user-select: all; }

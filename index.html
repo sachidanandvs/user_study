@@ -95,7 +95,13 @@
   <section id="screen-done" class="screen hidden">
     <h1>Thank you!</h1>
     <p id="done-status" class="lead">Saving your answers…</p>
-    <p>Completion code: <code id="done-code"></code></p>
+    <div id="done-code-box" class="card code-box hidden">
+      <div>Your completion code:</div>
+      <div class="code-row"><code id="done-code" class="big-code"></code>
+        <button id="btn-copy" class="ghost small-btn">Copy</button><span id="copy-msg" class="small"></span></div>
+      <p class="small">Please enter this code where you were asked for it.</p>
+    </div>
+    <p class="small">Session ID: <span id="done-sid"></span></p>
     <div id="done-retry" class="hidden">
       <button id="btn-retry" class="primary">Retry saving</button>
       <button id="btn-download" class="ghost">Download my answers (backup)</button>

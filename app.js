@@ -325,7 +325,8 @@
       save();
     }
     show("screen-done");
-    $("done-code").textContent = S.sid.toUpperCase();
+    $("done-sid").textContent = S.sid.toUpperCase();
+    $("done-code-box").classList.add("hidden");   // code only after a successful save
     $("done-retry").classList.add("hidden");
     $("done-status").textContent = "Saving your answers…";
     let ok = false;
@@ -335,6 +336,10 @@
     }
     if (ok) {
       $("done-status").textContent = "Your answers have been saved. You can close this tab.";
+      if (CFG.COMPLETION_CODE) {
+        $("done-code").textContent = CFG.COMPLETION_CODE;
+        $("done-code-box").classList.remove("hidden");
+      }
     } else {
       $("done-status").textContent = HAS_ENDPOINT
         ? "We couldn't reach the server to save your answers. Please press Retry; if that keeps failing, download the backup file and send it to the study organiser."
@@ -391,6 +396,15 @@
       if (map[k]) { e.preventDefault(); answer(map[k]); }
     });
     $("btn-retry").addEventListener("click", finish);
+    $("btn-copy").addEventListener("click", async () => {
+      const code = $("done-code").textContent;
+      try { await navigator.clipboard.writeText(code); $("copy-msg").textContent = "Copied"; }
+      catch (e) {   // clipboard API unavailable (file://, old browser): select the text so Ctrl+C works
+        const r = document.createRange(); r.selectNodeContents($("done-code"));
+        const sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+        $("copy-msg").textContent = "Selected: press Ctrl+C / Cmd+C";
+      }
+    });
     $("btn-download").addEventListener("click", () => {
       const blob = new Blob([JSON.stringify(S, null, 1)], { type: "application/json" });
       const a = document.createElement("a");
