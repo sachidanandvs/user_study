@@ -24,7 +24,7 @@
      ================================================================================================ -->
     <h1>Which video is more physically realistic?</h1>
     <p class="lead">You will watch <b>{TRIALS} pairs</b> of short AI-generated videos. For each pair, pick the
-      video whose motion and interactions look more <b>physically realistic</b>. It takes about
+      video which looks more <b>physically realistic</b>. It takes about
       <b>{MINUTES} minutes</b>. Your progress is saved in this browser, so you can close the tab and come back later.</p>
     <p>Each trial shows a text description and <b>two videos (A and B)</b> generated from it. They play in a loop.
       After both have played once, choose the video that is <b>more physically realistic</b>: the one whose
@@ -39,7 +39,6 @@
       <div class="ex"><span class="ex-ico">🎈</span><div><b>Gravity is wrong</b><br>Things float, hover, fall upward, or fall far too slowly or too fast.</div></div>
       <div class="ex"><span class="ex-ico">👻</span><div><b>Objects pass through each other</b><br>A hand goes through a ball, a foot sinks into the floor, objects overlap and merge.</div></div>
       <div class="ex"><span class="ex-ico">💥</span><div><b>Collisions look wrong</b><br>No reaction on impact, a bounce in the wrong direction, or a heavy object barely affected.</div></div>
-      <div class="ex"><span class="ex-ico">🔀</span><div><b>Objects change identity or number</b><br>One object morphs into another, or 2 balls become 3.</div></div>
       <div class="ex"><span class="ex-ico">🦵</span><div><b>Impossible bodies</b><br>Extra or merging limbs, joints bending the wrong way, a body twisting impossibly.</div></div>
       <div class="ex"><span class="ex-ico">💧</span><div><b>Liquids, cloth, smoke behave wrong</b><br>Water that doesn't flow or fill, liquid that acts solid, cloth that moves like a rigid sheet.</div></div>
       <div class="ex"><span class="ex-ico">❓</span><div><b>Anything else that seems physically off</b><br>Trust your intuition about how the real world works.</div></div>
@@ -47,17 +46,14 @@
 
     <h2>Please keep in mind</h2>
     <ul>
-      <li><b>Judge only physical realism.</b> Ignore image sharpness, colours, style, resolution, smoothness
-        of the frame rate, and black bars at the sides.</li>
-      <li>A video in which <b>almost nothing moves is not automatically more realistic</b>. If water is
-        being poured but never moves, or a kicked ball never leaves the foot, that is unrealistic too.</li>
+      <li><b>Judge only physical realism.</b> Don't focus much on visual quality and focus on physical realism.</li>
       <li>Both videos may have problems. Pick the one with <b>fewer or less severe</b> physics errors.
         You must choose one; if they look equally good, go with your best guess.</li>
       <li>Use <b>Replay</b> as often as you like. Keyboard: <kbd>A</kbd> / <kbd>←</kbd> for video A,
         <kbd>B</kbd> / <kbd>→</kbd> for video B, <kbd>R</kbd> = replay.</li>
     </ul>
     <p class="small">Participation is voluntary and anonymous. We record only your answers, timing,
-      a random ID for this browser, and your browser type. Please use a laptop or desktop if possible.</p>
+      a random ID for this browser. Please use a laptop or desktop if possible.</p>
 <!-- ======================================= END OF EDITABLE INSTRUCTIONS ======================================= -->
 
     <div class="start-row">
@@ -74,24 +70,25 @@
       <button id="btn-help" class="ghost small-btn">Instructions</button>
     </div>
     <div class="prompt card">
-      <div class="prompt-head">Text description</div>
-      <div id="prompt-action" class="prompt-action"></div>
+      <span class="prompt-head">Text description</span> <span id="prompt-action" class="prompt-action"></span>
       <p id="prompt-text" class="prompt-text"></p>
     </div>
-    <div class="pair">
-      <figure><div class="vlabel">A</div><video id="vA" muted playsinline loop preload="auto"></video></figure>
-      <figure><div class="vlabel">B</div><video id="vB" muted playsinline loop preload="auto"></video></figure>
+    <div class="stage">
+      <div class="pair">
+        <figure><div class="vlabel">A</div><video id="vA" muted playsinline loop preload="auto"></video></figure>
+        <figure><div class="vlabel">B</div><video id="vB" muted playsinline loop preload="auto"></video></figure>
+        <div id="loading" class="loading-overlay">Loading videos…</div>
+      </div>
+      <div class="decide">
+        <button class="ans" data-choice="A" disabled>A is more physically realistic</button>
+        <div class="decide-mid">
+          <div class="question">Which video is more <b>physically realistic</b>?</div>
+          <button id="btn-replay" class="ghost small-btn">⟲ Replay both</button>
+          <div id="wait-hint" class="small">Buttons unlock after both videos played once.</div>
+        </div>
+        <button class="ans" data-choice="B" disabled>B is more physically realistic</button>
+      </div>
     </div>
-    <div id="loading" class="small center">Loading videos…</div>
-    <div class="controls">
-      <button id="btn-replay" class="ghost">⟲ Replay both</button>
-    </div>
-    <div class="question">Which video is more <b>physically realistic</b>?</div>
-    <div class="answers">
-      <button class="ans" data-choice="A" disabled>A is more realistic</button>
-      <button class="ans" data-choice="B" disabled>B is more realistic</button>
-    </div>
-    <div id="wait-hint" class="small center">Answer buttons unlock after both videos have played once.</div>
   </section>
 
   <!-- ===== done ===== -->

@@ -79,3 +79,47 @@ main { max-width: none; padding: 1rem 2.5vw; }
         max-width: max(640px, calc((100vh - 28rem) * 3.4667 + 14px)); }
 .answers { max-width: min(1000px, 70vw); }
 @media (max-width: 760px) { .pair { max-width: none; } .answers { max-width: none; } }
+
+/* v4 (11-14): compact trial screen. Everything except the videos fits in ~200px; app.js (fitPair) then sizes the
+   video pair to the height that is actually left in the browser window, so the videos use the full width. */
+#screen-trial .topbar { margin-bottom: 6px; }
+#screen-trial .prompt { margin: 0 0 8px; padding: 6px 12px; }
+#screen-trial .prompt-head { display: inline; margin-right: 8px; }
+#screen-trial .prompt-action { display: inline; font-size: 1.05rem; }
+#screen-trial .prompt-text { margin: 2px 0 0; font-size: .92rem; line-height: 1.35; }
+.stage { width: 100%; margin: 0 auto; }
+.stage .pair { max-width: none; margin: 0; position: relative; }
+.loading-overlay { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 3;
+                   background: rgba(0,0,0,.7); color: #fff; padding: 6px 14px; border-radius: 8px; font-size: .9rem; }
+.decide { display: grid; grid-template-columns: 1fr auto 1fr; gap: 14px; align-items: stretch; margin-top: 8px; }
+.decide .ans { padding: 10px 8px; font-size: 1.1rem; }
+.decide-mid { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+              text-align: center; min-width: 13rem; }
+.decide-mid .question { margin: 0; font-size: 1rem; }
+.decide-mid .small-btn { margin: 2px 0; }
+.decide-mid #wait-hint { font-size: .78rem; }
+@media (max-width: 760px) {
+  .decide { grid-template-columns: 1fr 1fr; }
+  .decide-mid { grid-column: 1 / -1; grid-row: 1; }
+}
+
+/* v5 (11-14): instructions + done pages use the full window width and their text grows with the screen
+   (~16px on laptops, ~19px at 1920, ~25px at 2560, capped ~30px on 4K). Sizes below are in em so they follow. */
+#screen-instr, #screen-done { max-width: none; font-size: clamp(1rem, calc(0.85vw + 3px), 1.35rem); }
+#screen-instr h1, #screen-done h1 { font-size: 1.6em; }
+#screen-instr h2 { font-size: 1.15em; }
+#screen-instr .lead, #screen-done .lead { font-size: 1.05em; }
+#screen-instr .small, #screen-done .small { font-size: .85em; }
+#screen-instr .examples { grid-template-columns: repeat(auto-fill, minmax(17em, 1fr)); gap: .6em; }
+#screen-instr .ex { font-size: .95em; padding: .6em .75em; gap: .6em; }
+#screen-instr .ex-ico { font-size: 1.5em; }
+#screen-instr button, #screen-done button { font-size: 1em; }
+#screen-instr .start-row .primary { font-size: 1.1em; padding: .7em 1.6em; }
+
+/* v6 (11-14): trial screen = at most 88% of the window width (set by app.js fitPair), centred, with a wider gap
+   between the two videos. */
+#screen-trial { margin: 0 auto; }
+.stage { max-width: none; }
+#screen-trial .pair { column-gap: max(24px, 2.5vw); }
+#screen-trial .decide { column-gap: max(24px, 2.5vw); }
+@media (max-width: 760px) { #screen-trial .pair { row-gap: 10px; } }

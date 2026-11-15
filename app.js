@@ -48,6 +48,25 @@
     $(id).classList.remove("hidden");
     window.scrollTo(0, 0);
   }
+  // Size the trial screen to the window: at most 88% of the window width (videos are not blown up so far that the
+  // 832x480 encode looks soft), and no taller than the window so prompt + videos + answer buttons fit without
+  // scrolling (browser windows are shorter than the screen, so the height often decides). Two passes because the
+  // prompt text re-wraps when the width changes.
+  const MAX_FRAC = 0.88;
+  function fitPair() {
+    const scr = $("screen-trial");
+    if (scr.classList.contains("hidden")) return;
+    if (window.innerWidth <= 760) { scr.style.maxWidth = ""; return; }
+    scr.style.maxWidth = MAX_FRAC * window.innerWidth + "px";
+    const pair = scr.querySelector(".pair"), cs = getComputedStyle($("app"));
+    const pad = parseFloat(cs.paddingTop) + parseFloat(cs.paddingBottom);
+    const gap = parseFloat(getComputedStyle(pair).columnGap) || 14;
+    for (let i = 0; i < 2; i++) {
+      const other = scr.getBoundingClientRect().height - pair.getBoundingClientRect().height;
+      const avail = window.innerHeight - other - pad - 6;
+      scr.style.maxWidth = Math.min(MAX_FRAC * window.innerWidth, Math.max(560, avail * (832 / 480) * 2 + gap)) + "px";
+    }
+  }
   function save() { try { localStorage.setItem(LS_KEY, JSON.stringify(S)); } catch (e) { /* private mode */ } }
   function loadSaved() { try { return JSON.parse(localStorage.getItem(LS_KEY) || "null"); } catch (e) { return null; } }
 
@@ -74,9 +93,25 @@
       shuffle(assign[p], rng);
     }
 
-    // rounds: r-th appearance of each prompt; shuffle each round, keep the round boundary free of near repeats
-    const maxM = Math.max(...mult);
-    let seq = [];
+    // order: shuffle ALL trials together (repeats spread over the whole session, not bunched at the end) and keep
+    // the first order in which two showings of the same prompt are > MIN_GAP trials apart. Fallback (practically
+    // never needed): rounds = r-th appearance of each prompt, round boundary kept free of near repeats.
+    const items = [];
+    for (let p = 0; p < P; p++) for (let r = 0; r < mult[p]; r++) items.push({ p, b: assign[p][r] });
+    let seq = null;
+    for (let tries = 0; tries < 20000 && !seq; tries++) {
+      shuffle(items, rng);
+      const last = {};
+      let ok = true;
+      for (let i = 0; i < items.length && ok; i++) {
+        const q = items[i].p;
+        if (q in last && i - last[q] <= MIN_GAP) ok = false;
+        last[q] = i;
+      }
+      if (ok) seq = items.slice();
+    }
+    const maxM = seq ? 0 : Math.max(...mult);
+    if (!seq) seq = [];
     for (let r = 0; r < maxM; r++) {
       let round = [];
       for (let p = 0; p < P; p++) if (mult[p] > r) round.push({ p, b: assign[p][r] });
@@ -243,6 +278,7 @@
     $("progress-fill").style.width = `${(100 * pos) / S.trials.length}%`;
     $("prompt-action").textContent = pr.action ? pr.action.charAt(0).toUpperCase() + pr.action.slice(1) : "";
     $("prompt-text").textContent = pr.text;
+    fitPair();
     $("loading").textContent = "Loading videos…";
     $("loading").classList.remove("hidden");
     vA.pause(); vB.pause();
@@ -345,6 +381,7 @@
       location.reload();
     });
     $("btn-replay").addEventListener("click", replay);
+    window.addEventListener("resize", fitPair);
     document.querySelectorAll(".ans").forEach((b) => b.addEventListener("click", () => answer(b.dataset.choice)));
     document.addEventListener("keydown", (e) => {
       if ($("screen-trial").classList.contains("hidden") || e.target.tagName === "INPUT") return;
